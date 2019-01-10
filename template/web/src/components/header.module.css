@@ -1,0 +1,27 @@
+@import './vars.css';
+
+.root {
+  background: var(--color-black);
+  color: var(--color-white);
+  margin-bottom: 1.45rem;
+
+  & a {
+    color: inherit;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+}
+
+@media (--med) {
+  .root {
+    a {
+      &:hover {
+        color: color-mod(black alpha(54%));
+      }
+    }
+  }
+}

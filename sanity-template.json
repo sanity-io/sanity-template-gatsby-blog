@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "title": "Blog",
+  "description": "The de facto blog template for Sanity.",
+  "deployments": [
+    {
+      "type": "studio",
+      "title": "Content Studio",
+      "dir": "./studio",
+      "provider": {
+        "name": "netlify",
+        "config": {
+          "base": "studio",
+          "cmd": "npm run build",
+          "dir": "studio/dist"
+        }
+      }
+    },
+    {
+      "type": "web",
+      "title": "Frontend",
+      "dir": "./web",
+      "provider": {
+        "name": "netlify",
+        "config": {
+          "base": "web",
+          "cmd": "npm run build",
+          "dir": "web/public"
+        }
+      }
+    }
+  ],
+  "fields": [
+    {
+      "type": "string",
+      "name": "title",
+      "title": "Title"
+    },
+    {
+      "type": "string",
+      "name": "alias",
+      "title": "Alias"
+    }
+  ]
+}

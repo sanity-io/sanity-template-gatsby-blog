@@ -1,0 +1,6 @@
+@custom-media --med (width <= 50rem);
+
+:root {
+  --color-black: #333;
+  --color-white: #fff;
+}
