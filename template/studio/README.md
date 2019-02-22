@@ -1,1 +1,1 @@
-# {{repoName}}-studio
+# ^^^^repoName^^^^-studio
