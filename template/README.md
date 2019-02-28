@@ -1,1 +1,1 @@
-# <#< repoName >#>
+# <#< repository.name >#>
