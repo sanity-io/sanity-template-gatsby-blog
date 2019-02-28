@@ -1,1 +1,1 @@
-# ^^^^repoName^^^^-studio
+# <#< repository.name >#>-studio
