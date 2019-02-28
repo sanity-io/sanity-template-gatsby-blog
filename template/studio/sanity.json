@@ -1,11 +1,11 @@
 {
   "root": true,
   "project": {
-    "name": "^^^^projectTitle^^^^"
+    "name": "<#< sanity.projectTitle >#>"
   },
   "api": {
-    "projectId": "jmhf2rn8",
-    "dataset": "production"
+    "projectId": "<#< sanity.projectId >#>",
+    "dataset": "<#< sanity.dataset >#>"
   },
   "plugins": [
     "@sanity/base",
