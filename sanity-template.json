@@ -12,7 +12,7 @@
         "name": "netlify",
         "config": {
           "base": "studio",
-          "cmd": "npm run build",
+          "cmd": "npm run build && cp ./netlify.toml dist",
           "dir": "studio/dist"
         }
       }
