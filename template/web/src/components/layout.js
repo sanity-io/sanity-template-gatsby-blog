@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
+import {StaticQuery, graphql} from 'gatsby'
 
 import Header from './header'
 import './layout.css'
 
-const Layout = ({ children }) => (
+const Layout = ({children}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
-        site: sanitySiteSettings(_id: { eq: "siteSettings" }) {
+        site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
           title
         }
       }
@@ -29,10 +29,10 @@ const Layout = ({ children }) => (
 
           <hr />
           <footer>
-            © {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a>{' '}
+            © {new Date().getFullYear()}, Built with <a href="https://www.sanity.io">Sanity</a>{' '}
             &amp;
             {` `}
-            <a href='https://www.gatsbyjs.org'>Gatsby</a>
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
       </>

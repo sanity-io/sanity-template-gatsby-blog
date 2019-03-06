@@ -17,7 +17,7 @@ export default {
       name: 'keywords',
       title: 'Keywords',
       type: 'array',
-      of: [{ type: 'string' }]
+      of: [{type: 'string'}]
     },
     {
       name: 'author',

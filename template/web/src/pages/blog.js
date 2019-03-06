@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import {graphql, Link} from 'gatsby'
 
 import GraphQLErrorList from '../components/graphql-error-list'
 import Layout from '../components/layout'
@@ -22,7 +22,7 @@ export const query = graphql`
 `
 
 const BlogPage = props => {
-  const { data, errors } = props
+  const {data, errors} = props
 
   if (errors) {
     return (
@@ -36,17 +36,17 @@ const BlogPage = props => {
 
   return (
     <Layout>
-      <SEO title='Blog' />
+      <SEO title="Blog" />
       <h1>Blog</h1>
 
       <ul>
-        {postEdges.map(({ node }) => (
+        {postEdges.map(({node}) => (
           <li key={node.id}>
             <Link to={`/blog/${node.slug.current}`}>{node.title}</Link>
           </li>
         ))}
       </ul>
-      <Link to='/'>Go back to the homepage</Link>
+      <Link to="/">Go back to the homepage</Link>
     </Layout>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 
 import BlogPostPreview from '../components/blog-post-preview'
 import GraphQLErrorList from '../components/graphql-error-list'
@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 
 export const query = graphql`
   query IndexPageQuery {
-    site: sanitySiteSettings(_id: { eq: "siteSettings" }) {
+    site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
       title
       description
       keywords
@@ -30,7 +30,7 @@ export const query = graphql`
 `
 
 const IndexPage = props => {
-  const { data, errors } = props
+  const {data, errors} = props
 
   if (errors) {
     return (
@@ -49,7 +49,7 @@ const IndexPage = props => {
 
       <h2>Latest blog posts</h2>
       <ul>
-        {postEdges.map(({ node }) => (
+        {postEdges.map(({node}) => (
           <li key={node.id}>
             <BlogPostPreview {...node} />
           </li>

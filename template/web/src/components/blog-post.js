@@ -3,7 +3,7 @@ import BlockContent from './block-content'
 
 import styles from './blog-post.module.css'
 
-function BlogPost (props) {
+function BlogPost(props) {
   return (
     <article className={styles.root}>
       <h1 className={styles.headline}>{props.title}</h1>

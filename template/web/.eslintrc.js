@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   extends: ['standard', 'standard-react', 'plugin:import/errors', 'plugin:import/warnings'],
   rules: {
@@ -11,4 +9,4 @@ module.exports = {
       version: '16.6.3'
     }
   }
-}
+};

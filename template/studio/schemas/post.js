@@ -21,7 +21,7 @@ export default {
       name: 'author',
       title: 'Author',
       type: 'reference',
-      to: { type: 'author' }
+      to: {type: 'author'}
     },
     {
       name: 'excerpt',
@@ -40,7 +40,7 @@ export default {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'category' } }]
+      of: [{type: 'reference', to: {type: 'category'}}]
     },
     {
       name: 'publishedAt',
@@ -60,8 +60,8 @@ export default {
       author: 'author.name',
       media: 'mainImage'
     },
-    prepare (selection) {
-      const { author } = selection
+    prepare(selection) {
+      const {author} = selection
       return Object.assign({}, selection, {
         subtitle: author && `by ${author}`
       })

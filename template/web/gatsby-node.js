@@ -4,11 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-async function createBlogPostPages (graphql, actions) {
-  const { createPage, createPageDependency } = actions
+async function createBlogPostPages(graphql, actions) {
+  const {createPage, createPageDependency} = actions
   const result = await graphql(`
     {
-      allSanityPost(filter: { slug: { current: { ne: null } } }) {
+      allSanityPost(filter: {slug: {current: {ne: null}}}) {
         edges {
           node {
             id
@@ -25,7 +25,7 @@ async function createBlogPostPages (graphql, actions) {
 
   const postEdges = result.data.allSanityPost.edges || []
 
-  postEdges.forEach((edge, index) => {
+  postEdges.forEach(edge => {
     const id = edge.node.id
     const slug = edge.node.slug.current
     const path = `/blog/${slug}`
@@ -35,13 +35,13 @@ async function createBlogPostPages (graphql, actions) {
     createPage({
       path,
       component: require.resolve('./src/templates/blog-post.js'),
-      context: { id }
+      context: {id}
     })
 
-    createPageDependency({ path, nodeId: id })
+    createPageDependency({path, nodeId: id})
   })
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({graphql, actions}) => {
   await createBlogPostPages(graphql, actions)
 }

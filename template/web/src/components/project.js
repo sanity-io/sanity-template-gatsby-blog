@@ -3,7 +3,7 @@ import React from 'react'
 
 import styles from './project.module.css'
 
-function Project (props) {
+function Project(props) {
   return (
     <article className={styles.root}>
       <h1 className={styles.headline}>{props.title}</h1>
