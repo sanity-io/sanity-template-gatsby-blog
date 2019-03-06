@@ -4,6 +4,7 @@
   "description": "The de facto blog template for Sanity.",
   "deployments": [
     {
+      "id": "studio",
       "type": "studio",
       "title": "Content Studio",
       "dir": "./studio",
@@ -17,6 +18,7 @@
       }
     },
     {
+      "id": "web",
       "type": "web",
       "title": "Frontend",
       "dir": "./web",
