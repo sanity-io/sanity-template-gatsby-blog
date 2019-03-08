@@ -1,9 +1,11 @@
 {
   "private": true,
-  "name": "blog",
+  "name": "sanity-template-blog",
   "version": "0.0.0",
   "scripts": {
     "format": "lerna run format",
+    "build-studio": "(cd studio && npm run build)",
+    "build-web": "(cd studio && npm run graphql-deploy) && (cd web && npm run build)",
     "graphql-deploy": "lerna run graphql-deploy",
     "lint": "lerna run lint",
     "postinstall": "lerna bootstrap",
@@ -11,6 +13,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "lerna": "^3.9.0"
+    "lerna": "^3.13.1"
   }
 }

@@ -25,8 +25,7 @@
       "provider": {
         "name": "netlify",
         "config": {
-          "base": "web",
-          "cmd": "npm run build",
+          "cmd": "npm run build-web",
           "dir": "web/public"
         }
       }
