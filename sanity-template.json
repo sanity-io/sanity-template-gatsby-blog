@@ -22,6 +22,12 @@
       "type": "web",
       "title": "Frontend",
       "dir": "./web",
+      "requiredTokens": [
+        {
+          "role": "deploy-studio",
+          "label": "GraphQL API Deployer"
+        }
+      ],
       "provider": {
         "name": "netlify",
         "config": {
