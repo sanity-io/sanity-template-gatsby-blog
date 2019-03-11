@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "title": "Blog",
+  "title": "Blog with GatsbyJS",
   "description": "The de facto blog template for Sanity.",
   "deployments": [
     {
