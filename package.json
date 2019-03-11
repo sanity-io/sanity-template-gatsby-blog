@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "template-blog",
+  "name": "sanity-template-gatsby-blog",
   "scripts": {
     "export": "cd template/studio && sanity dataset export production ../../data/production.tar.gz"
   },
