@@ -13,14 +13,14 @@
     "test": "sanity check"
   },
   "dependencies": {
-    "@sanity/base": "^0.140.10-canary.82",
-    "@sanity/cli": "^0.140.10-canary.82",
-    "@sanity/components": "^0.140.10-canary.82",
-    "@sanity/core": "^0.140.10-canary.82",
-    "@sanity/dashboard": "^0.140.10-alpha.80",
-    "@sanity/default-layout": "^0.140.10-canary.82",
-    "@sanity/default-login": "^0.140.10-canary.82",
-    "@sanity/desk-tool": "^0.140.10-canary.82",
+    "@sanity/base": "0.140.10-canary.85",
+    "@sanity/cli": "0.140.10-canary.85",
+    "@sanity/components": "0.140.10-canary.85",
+    "@sanity/core": "0.140.10-canary.85",
+    "@sanity/dashboard": "0.140.10-canary.85",
+    "@sanity/default-layout": "0.140.10-canary.85",
+    "@sanity/default-login": "0.140.10-canary.85",
+    "@sanity/desk-tool": "0.140.10-canary.85",
     "prop-types": "^15.7.2",
     "react": "^16.2",
     "react-dom": "^16.2"
