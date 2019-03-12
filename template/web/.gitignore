@@ -66,3 +66,7 @@ yarn.lock
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Lock files
+/package-lock.json
+/yarn.lock
