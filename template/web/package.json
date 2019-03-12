@@ -4,7 +4,8 @@
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop",
+    "clean-cache": "rimraf .cache",
+    "dev": "npm run clean-cache && gatsby develop",
     "lint": "eslint .",
     "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
@@ -28,6 +29,7 @@
     "prettier-eslint-cli": "^4.7.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "rimraf": "^2.6.3"
   }
 }
