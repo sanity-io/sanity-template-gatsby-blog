@@ -14,7 +14,7 @@ export const query = graphql`
       slug {
         current
       }
-      bodyRaw
+      _rawBody
     }
   }
 `
