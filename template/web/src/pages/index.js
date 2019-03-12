@@ -83,7 +83,7 @@ const IndexPage = props => {
           <BlogPostPreviewGrid
             title='Latest blog posts'
             nodes={postNodes}
-            browseMoreHref='/blog/'
+            browseMoreHref='/archive/'
           />
         )}
       </Container>
