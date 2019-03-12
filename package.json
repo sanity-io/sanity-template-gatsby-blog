@@ -2,6 +2,7 @@
   "private": true,
   "name": "sanity-template-gatsby-blog",
   "scripts": {
+    "build": "sanity-template build --template-values template-values-development.json",
     "export": "cd template/studio && sanity dataset export production ../../data/production.tar.gz"
   },
   "devDependencies": {

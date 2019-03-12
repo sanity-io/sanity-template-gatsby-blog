@@ -1,0 +1,10 @@
+{
+  "repository": {
+    "name": "dev-sanity-gatsby-blog"
+  },
+  "sanity": {
+    "dataset": "development",
+    "projectId": "jmhf2rn8",
+    "projectTitle": "Dev GatsbyJS Blog"
+  }
+}
