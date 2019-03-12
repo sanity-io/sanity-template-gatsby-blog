@@ -1,23 +1,46 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-
-import BlogPostPreview from '../components/blog-post-preview'
+import {mapEdgesToNodes, filterOutDocsWithoutSlugs} from '../lib/helpers'
+import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
+import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Layout from '../containers/layout'
 
 export const query = graphql`
   query IndexPageQuery {
-    site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
+    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
       description
       keywords
     }
-
-    posts: allSanityPost(limit: 4) {
+    posts: allSanityPost(limit: 6, sort: {fields: [publishedAt], order: DESC}) {
       edges {
         node {
           id
+          publishedAt
+          mainImage {
+            crop {
+              _key
+              _type
+              top
+              bottom
+              left
+              right
+            }
+            hotspot {
+              _key
+              _type
+              x
+              y
+              height
+              width
+            }
+            asset {
+              _id
+            }
+            alt
+          }
           title
           _rawExcerpt
           slug {
@@ -40,21 +63,30 @@ const IndexPage = props => {
     )
   }
 
-  const site = data && data.site
-  const postEdges = data && data.posts && data.posts.edges
+  const site = (data || {}).site
+  const postNodes = (data || {}).posts
+    ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
+    : []
+
+  if (!site) {
+    throw new Error(
+      'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
+    )
+  }
 
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-
-      <h2>Latest blog posts</h2>
-      <ul>
-        {postEdges.map(({node}) => (
-          <li key={node.id}>
-            <BlogPostPreview {...node} />
-          </li>
-        ))}
-      </ul>
+      <Container>
+        <h1 hidden>Welcome to {site.title}</h1>
+        {postNodes && (
+          <BlogPostPreviewGrid
+            title='Latest blog posts'
+            nodes={postNodes}
+            browseMoreHref='/blog/'
+          />
+        )}
+      </Container>
     </Layout>
   )
 }

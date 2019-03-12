@@ -9,7 +9,10 @@ import author from './author'
 import blockContent from './blockContent'
 import blockText from './blockText'
 import category from './category'
+import mainImage from './mainImage'
+import person from './person'
 import post from './post'
+import postAuthor from './postAuthor'
 import siteSettings from './siteSettings'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -25,7 +28,10 @@ export default createSchema({
     blockContent,
     blockText,
     category,
+    mainImage,
+    person,
     post,
+    postAuthor,
     siteSettings
 
     // When added to this list, object types can be used as

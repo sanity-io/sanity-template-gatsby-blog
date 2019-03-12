@@ -4,7 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-async function createBlogPostPages (graphql, actions) {
+const {format} = require('date-fns')
+
+async function createBlogPostPages (graphql, actions, reporter) {
   const {createPage, createPageDependency} = actions
   const result = await graphql(`
     {
@@ -12,6 +14,7 @@ async function createBlogPostPages (graphql, actions) {
         edges {
           node {
             id
+            publishedAt
             slug {
               current
             }
@@ -23,14 +26,14 @@ async function createBlogPostPages (graphql, actions) {
 
   if (result.errors) throw result.errors
 
-  const postEdges = result.data.allSanityPost.edges || []
+  const postEdges = (result.data.allSanityPost || {}).edges || []
 
-  postEdges.forEach(edge => {
-    const id = edge.node.id
-    const slug = edge.node.slug.current
-    const path = `/blog/${slug}`
+  postEdges.forEach((edge, index) => {
+    const {id, slug = {}, publishedAt} = edge.node
+    const dateSegment = format(publishedAt, 'YYYY/MM')
+    const path = `/blog/${dateSegment}/${slug.current}/`
 
-    console.log(`Create blog post page: ${path}`)
+    reporter.info(`Creating blog post page: ${path}`)
 
     createPage({
       path,
@@ -42,6 +45,6 @@ async function createBlogPostPages (graphql, actions) {
   })
 }
 
-exports.createPages = async ({graphql, actions}) => {
-  await createBlogPostPages(graphql, actions)
+exports.createPages = async ({graphql, actions, reporter}) => {
+  await createBlogPostPages(graphql, actions, reporter)
 }

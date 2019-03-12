@@ -1,6 +1,6 @@
 export default {
   name: 'post',
-  title: 'Post',
+  title: 'Blog Post',
   type: 'document',
   fields: [
     {
@@ -12,16 +12,17 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      description: 'Some frontend will require a slug to be set to be able to show the post',
       options: {
         source: 'title',
         maxLength: 96
       }
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'}
+      name: 'publishedAt',
+      title: 'Published at',
+      description: 'You can use this field to schedule post where you show them',
+      type: 'datetime'
     },
     {
       name: 'excerpt',
@@ -29,12 +30,15 @@ export default {
       type: 'blockText'
     },
     {
+      name: 'authors',
+      title: 'Authors',
+      type: 'array',
+      of: [{type: 'postAuthor'}]
+    },
+    {
       name: 'mainImage',
       title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
+      type: 'mainImage'
     },
     {
       name: 'categories',
@@ -43,28 +47,37 @@ export default {
       of: [{type: 'reference', to: {type: 'category'}}]
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime'
-    },
-    {
       name: 'body',
       title: 'Body',
       type: 'blockContent'
     }
   ],
-
+  orderings: [
+    {
+      title: 'Publishing date new–>old',
+      name: 'publishingDateAsc',
+      by: [{field: 'publishedAt', direction: 'asc'}, {field: 'title', direction: 'asc'}]
+    },
+    {
+      title: 'Publishing date old->new',
+      name: 'publishingDateDesc',
+      by: [{field: 'publishedAt', direction: 'desc'}, {field: 'title', direction: 'asc'}]
+    }
+  ],
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
-      media: 'mainImage'
+      publishedAt: 'publishedAt',
+      image: 'mainImage'
     },
-    prepare (selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`
-      })
+    prepare ({title = 'No title', publishedAt, image}) {
+      return {
+        title,
+        subtitle: publishedAt
+          ? new Date(publishedAt).toLocaleDateString()
+          : 'Missing publishing date',
+        media: image
+      }
     }
   }
 }
