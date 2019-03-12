@@ -1,7 +1,7 @@
 {
   "version": 1,
   "title": "Blog with Gatsby",
-  "description": "The de facto blog template for Sanity.",
+  "description": "The de facto blog template for Sanity with Gatsby.",
   "deployments": [
     {
       "id": "studio",
@@ -35,18 +35,6 @@
           "dir": "web/public"
         }
       }
-    }
-  ],
-  "fields": [
-    {
-      "type": "string",
-      "name": "title",
-      "title": "Title"
-    },
-    {
-      "type": "string",
-      "name": "alias",
-      "title": "Alias"
     }
   ]
 }
