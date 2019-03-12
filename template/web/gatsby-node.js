@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-async function createBlogPostPages(graphql, actions) {
+async function createBlogPostPages (graphql, actions) {
   const {createPage, createPageDependency} = actions
   const result = await graphql(`
     {

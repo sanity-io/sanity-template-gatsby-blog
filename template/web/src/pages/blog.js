@@ -36,7 +36,7 @@ const BlogPage = props => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title='Blog' />
       <h1>Blog</h1>
 
       <ul>
@@ -46,7 +46,7 @@ const BlogPage = props => {
           </li>
         ))}
       </ul>
-      <Link to="/">Go back to the homepage</Link>
+      <Link to='/'>Go back to the homepage</Link>
     </Layout>
   )
 }

@@ -3,7 +3,8 @@ const path = require('path')
 module.exports = {
   extends: ['standard', 'standard-react'],
   rules: {
-    'react/prop-types': 0
+    'react/prop-types': 0,
+    'object-curly-spacing': ['error', 'never']
   },
   settings: {
     react: {

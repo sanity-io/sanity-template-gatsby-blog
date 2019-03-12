@@ -29,10 +29,10 @@ const Layout = ({children}) => (
 
           <hr />
           <footer>
-            © {new Date().getFullYear()}, Built with <a href="https://www.sanity.io">Sanity</a>{' '}
+            © {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a>{' '}
             &amp;
             {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <a href='https://www.gatsbyjs.org'>Gatsby</a>
           </footer>
         </div>
       </>
