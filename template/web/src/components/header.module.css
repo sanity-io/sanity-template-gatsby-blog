@@ -19,8 +19,7 @@
 }
 
 .branding {
-  font-size: inherit;
-  margin: 0;
+  font-weight: 700;
   flex: 1;
 
   @nest & a {
