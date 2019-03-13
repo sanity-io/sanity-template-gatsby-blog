@@ -36,5 +36,19 @@
         }
       }
     }
-  ]
+  ],
+  "metadata": {
+    "technologies": [
+      {
+        "id": "gatsby",
+        "name": "Gatsby",
+        "url": "https://www.gatsbyjs.org/"
+      },
+      {
+        "id": "netlify",
+        "name": "Netlify",
+        "url": "https://www.netlify.com/"
+      }
+    ]
+  }
 }
