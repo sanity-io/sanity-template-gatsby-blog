@@ -1,3 +1,7 @@
 # sanity-template-gatsby-blog
 
-[Roll your own](https://create.sanity.io/?template=sanity-io/sanity-template-gatsby-blog)
+## _WORK IN PROGRESS_
+
+In the future, you’ll be able to use this repo to create a new Sanity project by clicking this button:
+
+[Create Sanity project](https://create.sanity.io/?template=sanity-io/sanity-template-gatsby-blog)
