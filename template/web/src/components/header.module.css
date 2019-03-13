@@ -4,6 +4,9 @@
 .root {
   position: relative;
   z-index: 100;
+  background: var(--color-black);
+  color: var(--color-white);
+  margin-bottom: 1px;
 }
 
 .wrapper {
@@ -44,9 +47,11 @@
   margin: 0;
   padding: calc(14 / 17 / 2 * 1rem);
   outline: none;
+  color: inherit;
 
   & svg {
     display: block;
+    fill: inherit;
   }
 
   @media (--media-min-small) {
@@ -76,7 +81,8 @@
 
   @media (--media-max-small) {
     position: absolute;
-    background: #fff;
+    background: var(--color-white);
+    color: var(--color-black);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     left: 0;
     right: 0;

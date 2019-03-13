@@ -2,15 +2,16 @@
 @import '../styles/custom-properties.css';
 
 .content {
-  min-height: calc(100% - 73px - 152px);
+  min-height: calc(100% - 74px - 69px);
 
   @media (--media-min-small) {
-    min-height: calc(100% - 90px - 169px);
+    min-height: calc(100% - 91px - 86px);
   }
 }
 
 .footer {
-
+  background: var(--color-black);
+  color: var(--color-white);
 }
 
 .footerWrapper {
