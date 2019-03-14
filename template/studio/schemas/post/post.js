@@ -1,7 +1,7 @@
 export default {
+  type: 'document',
   name: 'post',
   title: 'Blog Post',
-  type: 'document',
   fields: [
     {
       name: 'title',
@@ -27,18 +27,18 @@ export default {
     {
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'blockText'
+      type: 'post.excerpt'
     },
     {
       name: 'authors',
       title: 'Authors',
       type: 'array',
-      of: [{type: 'postAuthor'}]
+      of: [{type: 'post.author'}]
     },
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'mainImage'
+      type: 'post.mainImage'
     },
     {
       name: 'categories',
@@ -49,7 +49,7 @@ export default {
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent'
+      type: 'post.content'
     }
   ],
   orderings: [

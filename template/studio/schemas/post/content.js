@@ -9,9 +9,9 @@
  *  }
  */
 export default {
-  title: 'Block Content',
-  name: 'blockContent',
   type: 'array',
+  name: 'post.content',
+  title: 'Post content',
   of: [
     {
       title: 'Block',
