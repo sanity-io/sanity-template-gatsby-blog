@@ -2,6 +2,7 @@
 @import '../styles/custom-properties.css';
 
 .content {
+  background: var(--color-white);
   min-height: calc(100% - 74px - 69px);
 
   @media (--media-min-small) {

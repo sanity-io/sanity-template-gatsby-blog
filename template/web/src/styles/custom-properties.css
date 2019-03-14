@@ -1,5 +1,7 @@
 :root {
-  --color-black: #202123;
+  --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-black: #000;
   --color-white: #fff;
-  --color-accent: #156DFF;
+  --color-accent: #00f;
 }
