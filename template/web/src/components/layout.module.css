@@ -3,10 +3,10 @@
 
 .content {
   background: var(--color-white);
-  min-height: calc(100% - 74px - 69px);
+  min-height: calc(100% - 74px - 120px);
 
   @media (--media-min-small) {
-    min-height: calc(100% - 91px - 86px);
+    min-height: calc(100% - 91px - 154px);
   }
 }
 
@@ -18,11 +18,11 @@
 .footerWrapper {
   box-sizing: border-box;
   max-width: 960px;
-  padding: 1.5em;
+  padding: 4.5em 1.5em 1.5em;
   margin: 0 auto;
 
   @media (--media-min-small) {
-    padding: 2em;
+    padding: 6em 2em 2em;
   }
 }
 
