@@ -7,15 +7,7 @@ import styles from './blog-post-preview-grid.module.css'
 function BlogPostPreviewGrid (props) {
   return (
     <div className={styles.root}>
-      {props.title && (
-        <h2 className={styles.headline}>
-          {props.browseMoreHref ? (
-            <Link to={props.browseMoreHref}>{props.title}</Link>
-          ) : (
-            props.title
-          )}
-        </h2>
-      )}
+      {props.title && <h2 className={styles.headline}>{props.title}</h2>}
       <ul className={styles.grid}>
         {props.nodes &&
           props.nodes.map(node => (
