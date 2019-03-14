@@ -23,7 +23,9 @@
     "@sanity/desk-tool": "^0.140.11",
     "prop-types": "^15.7.2",
     "react": "^16.2",
-    "react-dom": "^16.2"
+    "react-dom": "^16.2",
+    "sanity-plugin-dashboard-widget-document-list": "^0.0.3",
+    "sanity-plugin-dashboard-widget-netlify": "^0.1.2"
   },
   "devDependencies": {
     "eslint": "^5.15.1",
