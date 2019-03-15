@@ -8,5 +8,8 @@
     "copy-studio-node-modules": "cp -R build/studio/node_modules template/studio/node_modules",
     "copy-web-node-modules": "cp -R build/web/node_modules template/web/node_modules",
     "export": "cd build/studio && sanity dataset export production ../../data/production.tar.gz"
+  },
+  "devDependencies": {
+    "sanity-template-tools": "^1.0.0-alpha.0"
   }
 }
