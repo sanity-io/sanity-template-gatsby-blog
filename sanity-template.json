@@ -34,6 +34,11 @@
           "cmd": "npm run build-web",
           "dir": "web/public"
         }
+      },
+      "preview": {
+        "images": [
+          { "src": "assets/preview-00.jpg", "alt": "A mock preview image" }
+        ]
       }
     }
   ],
