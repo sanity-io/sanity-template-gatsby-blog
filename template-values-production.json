@@ -1,6 +1,7 @@
 {
   "repository": {
-    "name": "dev-sanity-gatsby-blog"
+    "name": "dev-sanity-gatsby-blog",
+    "title": "Blog (Gatsby.js + Sanity.io + Netlify)"
   },
   "sanity": {
     "dataset": "production",
