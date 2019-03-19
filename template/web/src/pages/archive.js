@@ -17,9 +17,7 @@ export const query = graphql`
           id
           publishedAt
           mainImage {
-            asset {
-              _id
-            }
+            ...SanityImage
             alt
           }
           title
