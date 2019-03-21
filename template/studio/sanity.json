@@ -17,8 +17,7 @@
     "dashboard-widget-structure-menu",
     "dashboard-widget-document-list",
     "dashboard-widget-netlify",
-    "dashboard-widget-welcome",
-    "dashboard-widget-project-info"
+    "dashboard-widget-welcome"
   ],
   "parts": [
     {
