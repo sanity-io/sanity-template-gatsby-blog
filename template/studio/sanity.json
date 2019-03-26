@@ -15,10 +15,9 @@
     "@sanity/dashboard",
     "@sanity/desk-tool"
   ],
-  "parts": [
-    {
+  "parts": [{
       "name": "part:@sanity/base/schema",
-      "path": "./schemas"
+      "path": "./schemas/schema.js"
     },
     {
       "name": "part:@sanity/desk-tool/structure",

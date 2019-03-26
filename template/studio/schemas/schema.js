@@ -10,6 +10,12 @@ import person from './person'
 import postTypes from './post'
 import siteSettings from './siteSettings'
 
+import content from './content'
+import excerpt from './excerpt'
+import mainImage from './mainImage'
+import post from './post'
+import author from './author'
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
