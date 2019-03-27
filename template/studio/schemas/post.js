@@ -2,8 +2,7 @@ export default {
   type: 'document',
   name: 'post',
   title: 'Blog Post',
-  fields: [
-    {
+  fields: [{
       name: 'title',
       title: 'Title',
       type: 'string'
@@ -27,41 +26,59 @@ export default {
     {
       name: 'excerpt',
       title: 'Excerpt',
-      type: 'post.excerpt'
+      type: 'excerpt'
     },
     {
       name: 'authors',
       title: 'Authors',
       type: 'array',
-      of: [{type: 'post.author'}]
+      of: [{
+        type: 'author'
+      }]
     },
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'post.mainImage'
+      type: 'mainImage'
     },
     {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
+      of: [{
+        type: 'reference',
+        to: {
+          type: 'category'
+        }
+      }]
     },
     {
       name: 'body',
       title: 'Body',
-      type: 'post.content'
+      type: 'portableText'
     }
   ],
-  orderings: [
-    {
+  orderings: [{
       title: 'Publishing date new–>old',
       name: 'publishingDateAsc',
-      by: [{field: 'publishedAt', direction: 'asc'}, {field: 'title', direction: 'asc'}]
+      by: [{
+        field: 'publishedAt',
+        direction: 'asc'
+      }, {
+        field: 'title',
+        direction: 'asc'
+      }]
     },
     {
       title: 'Publishing date old->new',
       name: 'publishingDateDesc',
-      by: [{field: 'publishedAt', direction: 'desc'}, {field: 'title', direction: 'asc'}]
+      by: [{
+        field: 'publishedAt',
+        direction: 'desc'
+      }, {
+        field: 'title',
+        direction: 'asc'
+      }]
     }
   ],
   preview: {
@@ -70,12 +87,15 @@ export default {
       publishedAt: 'publishedAt',
       image: 'mainImage'
     },
-    prepare ({title = 'No title', publishedAt, image}) {
+    prepare({
+      title = 'No title',
+      publishedAt,
+      image
+    }) {
       return {
         title,
-        subtitle: publishedAt
-          ? new Date(publishedAt).toLocaleDateString()
-          : 'Missing publishing date',
+        subtitle: publishedAt ?
+          new Date(publishedAt).toLocaleDateString() : 'Missing publishing date',
         media: image
       }
     }

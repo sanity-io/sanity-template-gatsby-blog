@@ -1,6 +1,6 @@
 export default {
   type: 'object',
-  name: 'post.author',
+  name: 'author',
   title: 'Post author',
   fields: [
     {

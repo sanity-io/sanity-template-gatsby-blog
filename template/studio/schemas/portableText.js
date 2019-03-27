@@ -10,7 +10,7 @@
  */
 export default {
   type: 'array',
-  name: 'post.content',
+  name: 'portableText',
   title: 'Post content',
   of: [
     {

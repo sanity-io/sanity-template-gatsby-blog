@@ -10,7 +10,7 @@
  */
 export default {
   type: 'array',
-  name: 'post.excerpt',
+  name: 'excerpt',
   title: 'Post excerpt',
   of: [
     {
