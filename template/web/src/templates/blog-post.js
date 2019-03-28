@@ -23,9 +23,10 @@ export const query = graphql`
       slug {
         current
       }
-      _rawBody
+      _rawBody(resolveReferences: {maxDepth: 5})
       authors {
         _key
+        author {
           image {
             crop {
               _key
@@ -48,6 +49,7 @@ export const query = graphql`
             }
           }
           name
+        }
       }
     }
   }
