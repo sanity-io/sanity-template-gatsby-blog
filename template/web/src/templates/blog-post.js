@@ -26,7 +26,6 @@ export const query = graphql`
       _rawBody
       authors {
         _key
-        person {
           image {
             crop {
               _key
@@ -49,8 +48,6 @@ export const query = graphql`
             }
           }
           name
-        }
-        roles
       }
     }
   }

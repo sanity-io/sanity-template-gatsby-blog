@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
 export const query = graphql`
-  fragment SanityImage on SanityPostMainImage {
+  fragment SanityImage on SanityMainImage {
     crop {
       _key
       _type
