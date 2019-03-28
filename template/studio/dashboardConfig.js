@@ -6,23 +6,24 @@ export default {
     {
       name: 'project-info',
       options: {
-        __experimental_before: [
-          {
-            name: 'netlify',
-            options: {
-              title: 'Netlify',
-              sites: [
-                <#<#deployments>#>
-                {
-                  buildHookId: '<#<provider.buildHookId>#>',
-                  name: '<#<name>#>',
-                  siteId: '<#<provider.siteId>#>'
-                },
-                <#</deployments>#>
-              ]
-            }
-          }
-        ],
+        // Commented out until we fix spec of `deployments`
+        // __experimental_before: [
+        //   {
+        //     name: 'netlify',
+        //     options: {
+        //       title: 'Netlify',
+        //       sites: [
+        //         <#<#deployments>#>
+        //         {
+        //           buildHookId: '<#<provider.buildHookId>#>',
+        //           name: '<#<name>#>',
+        //           siteId: '<#<provider.siteId>#>'
+        //         },
+        //         <#</deployments>#>
+        //       ]
+        //     }
+        //   }
+        // ],
       }
     },
     {name: 'project-users', layout: {height: 'auto'}},
