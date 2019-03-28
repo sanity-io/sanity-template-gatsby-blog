@@ -36,7 +36,7 @@ export default {
     },
     {
       name: 'excerpt',
-      type: 'text',
+      type: 'excerptPortableText',
       title: 'Excerpt',
       description: 'This ends up on summary pages, on Google, when people share your post in social media.'
     },
@@ -46,8 +46,7 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'reference',
-          to: [{ type: 'author' }]
+          type: 'authorReference'
         }
       ]
     },
@@ -66,7 +65,7 @@ export default {
     },
     {
       name: 'body',
-      type: 'portableText',
+      type: 'bodyPortableText',
       title: 'Body'
     },
   ],
