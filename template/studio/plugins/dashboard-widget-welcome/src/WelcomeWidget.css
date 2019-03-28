@@ -1,0 +1,76 @@
+@import 'part:@sanity/base/theme/variables-style';
+
+.root {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+
+  @media (min-width: 60em) {
+    display: flex;
+  }
+}
+
+.media {
+  background: var(--preview-placeholder-color);
+
+  @nest & > div {
+    padding-bottom: calc(9 / 16 * 100%);
+    background-image: url('./knut.png');
+    background-size: cover;
+  }
+
+  @media (min-width: 60em) {
+    width: 66.666%;
+  }
+
+  @media (min-width: 100em) {
+    width: 50%;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--medium-padding) * 2) var(--medium-padding);
+  box-sizing: border-box;
+  text-align: center;
+
+  @nest & h2 {
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 1;
+    margin: 0 0 var(--medium-padding);
+  }
+
+  @nest & p {
+    max-width: 30em;
+    margin: var(--medium-padding) auto;
+  }
+
+  @media (min-width: 60em) {
+    width: 33.334%;
+  }
+
+  @media (min-width: 100em) {
+    width: 50%;
+  }
+}
+
+.illustration {
+  display: none;
+  width: 100%;
+  max-width: 328px;
+  margin: -2em auto 0;
+
+  @nest & > div {
+    padding-bottom: calc(164 / 328 * 100%);
+    background-image: url('./beach-illustration@2x.png');
+    background-size: cover;
+  }
+
+  @media (min-width: 60em) {
+    display: block;
+  }
+}

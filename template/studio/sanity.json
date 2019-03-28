@@ -13,7 +13,11 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/dashboard",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "dashboard-widget-structure-menu",
+    "dashboard-widget-document-list",
+    "dashboard-widget-netlify",
+    "dashboard-widget-welcome"
   ],
   "parts": [{
       "name": "part:@sanity/base/schema",
@@ -26,10 +30,6 @@
     {
       "implements": "part:@sanity/dashboard/config",
       "path": "dashboardConfig.js"
-    },
-    {
-      "implements": "part:@sanity/dashboard/widget",
-      "path": "./widgets/netlifyDeploy"
     }
   ]
 }

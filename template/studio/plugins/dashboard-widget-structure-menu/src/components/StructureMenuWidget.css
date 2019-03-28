@@ -1,0 +1,36 @@
+@import 'part:@sanity/base/theme/variables-style';
+
+.root {
+  display: grid;
+  grid-gap: var(--medium-padding);
+  grid-template-columns: repeat(4, minmax(120px, 25%));
+  overflow-x: auto;
+}
+
+.link {
+  outline: none;
+  background: #fff;
+  display: block;
+  border-radius: 4px;
+  padding: var(--medium-padding);
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+  box-sizing: border-box;
+
+  @media (hover: hover) {
+    @nest &:hover {
+      color: var(--brand-primary--inverted);
+      background-color: var(--default-button-primary-color);
+    }
+  }
+
+  @nest &:focus {
+    color: var(--brand-primary--inverted);
+    background-color: var(--default-button-primary-color);
+  }
+}
+
+.iconWrapper {
+  font-size: 2em;
+}
