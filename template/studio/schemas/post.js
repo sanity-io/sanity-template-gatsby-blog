@@ -1,17 +1,22 @@
+const {format} = require('date-fns')
+
 export default {
   type: 'document',
   name: 'post',
   title: 'Blog Post',
-  fields: [{
+  fields: [
+    {
       name: 'title',
+      type: 'string',
       title: 'Title',
-      type: 'string'
+      description: 'Titles should be catchy, descriptive, and not too long'
     },
     {
       name: 'slug',
-      title: 'Slug',
       type: 'slug',
-      description: 'Some frontend will require a slug to be set to be able to show the post',
+      title: 'Slug',
+      description:
+        'Some frontends will require a slug to be set to be able to show the post',
       options: {
         source: 'title',
         maxLength: 96
@@ -19,84 +24,98 @@ export default {
     },
     {
       name: 'publishedAt',
+      type: 'datetime',
       title: 'Published at',
-      description: 'You can use this field to schedule post where you show them',
-      type: 'datetime'
+      description:
+        'This can be used to schedule post for publishing',
+    },
+    {
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'mainImage',
     },
     {
       name: 'excerpt',
+      type: 'text',
       title: 'Excerpt',
-      type: 'excerpt'
+      description: 'This ends up on summary pages, on Google, when people share your post in social media.'
     },
     {
       name: 'authors',
       title: 'Authors',
       type: 'array',
-      of: [{
-        type: 'author'
-      }]
-    },
-    {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'mainImage'
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'author' }]
+        }
+      ]
     },
     {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{
-        type: 'reference',
-        to: {
-          type: 'category'
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'category'
+          }
         }
-      }]
+      ]
     },
     {
       name: 'body',
-      title: 'Body',
-      type: 'portableText'
-    }
+      type: 'portableText',
+      title: 'Body'
+    },
   ],
-  orderings: [{
+  orderings: [
+    {
       title: 'Publishing date new–>old',
       name: 'publishingDateAsc',
-      by: [{
-        field: 'publishedAt',
-        direction: 'asc'
-      }, {
-        field: 'title',
-        direction: 'asc'
-      }]
+      by: [
+        {
+          field: 'publishedAt',
+          direction: 'asc'
+        },
+        {
+          field: 'title',
+          direction: 'asc'
+        }
+      ]
     },
     {
       title: 'Publishing date old->new',
       name: 'publishingDateDesc',
-      by: [{
-        field: 'publishedAt',
-        direction: 'desc'
-      }, {
-        field: 'title',
-        direction: 'asc'
-      }]
+      by: [
+        {
+          field: 'publishedAt',
+          direction: 'desc'
+        },
+        {
+          field: 'title',
+          direction: 'asc'
+        }
+      ]
     }
   ],
   preview: {
     select: {
       title: 'title',
+      slug: 'slug',
       publishedAt: 'publishedAt',
-      image: 'mainImage'
+      media: 'mainImage'
     },
-    prepare({
-      title = 'No title',
-      publishedAt,
-      image
-    }) {
+    prepare ({ title = 'No title', publishedAt, slug, media }) {
+      const dateSegment = format(publishedAt, 'YYYY/MM')
+      const path = `/${dateSegment}/${slug.current}/`
       return {
         title,
-        subtitle: publishedAt ?
-          new Date(publishedAt).toLocaleDateString() : 'Missing publishing date',
-        media: image
+        media,
+        subtitle: publishedAt
+          ? path
+          : 'Missing publishing date'
       }
     }
   }

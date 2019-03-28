@@ -52,11 +52,10 @@ export default {
             ]
           }
         ]
-      }
+      },
       of: [
         {
           type: 'reference',
-          title: 'Inline reference to author',
           to: [{type: 'author'}]
         }
       ]

@@ -1,42 +1,43 @@
 export default {
-  type: 'object',
+  type: 'document',
   name: 'author',
-  title: 'Post author',
+  title: 'Author',
   fields: [
     {
-      title: 'Person',
-      name: 'person',
-      type: 'reference',
-      to: {type: 'person'}
+      name: 'name',
+      title: 'Name',
+      type: 'string'
     },
     {
-      title: 'Roles',
-      name: 'roles',
-      type: 'array',
-      of: [{type: 'string'}],
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      description:
+        'Some frontends will require a slug to be set to be able to show the person',
       options: {
-        layout: 'radio',
-        list: [
-          {title: 'Illustration', value: 'illustration'},
-          {title: 'Text', value: 'text'},
-          {title: 'Editor', value: 'editor'}
-        ]
+        source: 'name',
+        maxLength: 96
       }
+    },
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'bio',
+      type: 'simplePortableText',
+      title: 'Biography'
     }
   ],
   preview: {
     select: {
-      personName: 'person.name',
-      roles: 'roles',
-      image: 'person.image'
-    },
-    prepare (data) {
-      return {
-        ...data,
-        title: data.personName,
-        subtitle: data.roles && data.roles.join('/'),
-        media: data.image
-      }
+      title: 'name',
+      subtitle: 'slug.current',
+      media: 'image'
     }
   }
 }
