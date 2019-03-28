@@ -21,8 +21,8 @@
       "name": "Studio",
       "provider": {
         "name": "netlify",
-        "buildHookId": "5c8a3e772e5d865864073318",
-        "siteId": "d3c933cd-b854-4674-b2b7-df0d9372bb31"
+        "buildHookId": "5c8b6098f5513cfa270c2c81",
+        "siteId": "811138dd-635a-4982-8d4f-717dcc6877ba"
       }
     },
     {
@@ -30,8 +30,8 @@
       "name": "Frontend",
       "provider": {
         "name": "netlify",
-        "buildHookId": "5c8a3e39dd8b71addd4c8379",
-        "siteId": "cc50f78e-9044-4d19-bffc-cf78b4917958"
+        "buildHookId": "5c8b6053b627006dc3e7ecf2",
+        "siteId": "c733d053-2a2f-4e63-b290-57bbb5ae1577"
       }
     }
   ]
