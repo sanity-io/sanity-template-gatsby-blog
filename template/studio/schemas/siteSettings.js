@@ -1,22 +1,24 @@
 export default {
-  type: 'document',
   name: 'siteSettings',
+  type: 'document',
   title: 'Site Settings',
   fields: [
     {
       name: 'title',
+      type: 'string',
       title: 'Title',
-      type: 'string'
     },
     {
       name: 'description',
+      type: 'text',
       title: 'Description',
-      type: 'text'
+      description: 'Describe your blog for search engines and social media.'
     },
     {
       name: 'keywords',
-      title: 'Keywords',
       type: 'array',
+      title: 'Keywords',
+      description: 'Add keywords that describes your blog.',
       of: [{type: 'string'}],
       options: {
         layout: 'tags'
@@ -24,8 +26,8 @@ export default {
     },
     {
       name: 'author',
+      type: 'string',
       title: 'Author',
-      type: 'string'
     }
   ]
 }
