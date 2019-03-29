@@ -2,11 +2,12 @@
 
 .root {
   margin: 2rem 0 3rem;
-  border-top: 1px solid var(--color-black);
+  border-top: 1px solid var(--color-very-light-gray);
 }
 
 .headline {
   composes: base from './typography.module.css';
+  font-weight: 600;
   margin: 0.5rem 0 0;
 }
 
@@ -33,7 +34,7 @@
   position: relative;
   width: 3em;
   height: 3em;
-  background: #eee;
+  background: var(--color-very-light-gray);
   border-radius: 50%;
   overflow: hidden;
 

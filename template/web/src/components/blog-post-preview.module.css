@@ -1,3 +1,5 @@
+@import '../styles/custom-properties.css';
+
 .root {
   display: block;
   color: inherit;
@@ -7,7 +9,7 @@
 .leadMediaThumb {
   position: relative;
   padding-bottom: 66.666%;
-  background: #eee;
+  background: var(--color-very-light-gray);
 
   @nest & img {
     position: absolute;

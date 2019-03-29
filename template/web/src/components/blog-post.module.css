@@ -9,7 +9,7 @@
 
 .mainImage {
   position: relative;
-  background: #eee;
+  background: var(--color-very-light-gray);
   padding-bottom: calc(9 / 16 * 100%);
 
   @nest & img {
@@ -43,6 +43,10 @@
       }
     }
   }
+
+  @nest & h2, & h3, & h4, & h5, & h6 {
+    font-weight: 600;
+  }
 }
 
 .metaContent {
@@ -50,7 +54,8 @@
 
 .publishedAt {
   composes: small from './typography.module.css';
-  margin: 1.5rem 0 3rem;
+  margin: 2rem 0 3rem;
+  color: var(--color-gray);
 }
 
 .categories {
