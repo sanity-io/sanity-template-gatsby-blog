@@ -6,7 +6,7 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Title',
+      title: 'Title'
     },
     {
       name: 'description',
@@ -29,9 +29,7 @@ export default {
       type: 'reference',
       description: 'Publish an author and set a reference to them here.',
       title: 'Author',
-      to: [
-        { type: 'author' }
-      ]
+      to: [{type: 'author'}]
     }
   ]
 }

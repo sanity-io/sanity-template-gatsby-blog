@@ -10,29 +10,28 @@
     "projectTitle": "Gatsby Blog"
   },
   "user": {
-    "displayName": "Marius Lundgård",
     "profileImage": "https://lh3.googleusercontent.com/-a67P3TV8b5g/AAAAAAAAAAI/AAAAAAAAADI/LGBX1ZAjh88/photo.jpg",
+    "displayName": "Marius Lundgård",
     "email": "marius@sanity.io"
   },
   "userInput": {},
-  "deployments": [
-    {
-      "url": "http://sanity-gatsby-blog-studio-mikmcw27.netlify.com/",
-      "name": "Studio",
+  "deployments": {
+    "studio": {
+      "title": "Content Studio",
+      "url": "https://sanity-gatsby-blog2-studio-2wk163sh.netlify.com",
       "provider": {
         "name": "netlify",
-        "buildHookId": "5c8a3e772e5d865864073318",
-        "siteId": "d3c933cd-b854-4674-b2b7-df0d9372bb31"
+        "siteId": "xxxx-xxxxx-xxxxx-xxxx-xxxxx"
       }
     },
-    {
-      "url": "http://sanity-gatsby-blog-web-vce5ru3w.netlify.com/",
-      "name": "Frontend",
+    "web": {
+      "title": "Frontend",
+      "url": "https://sanity-gatsby-blog2-web.netlify.com",
       "provider": {
         "name": "netlify",
-        "buildHookId": "5c8a3e39dd8b71addd4c8379",
-        "siteId": "cc50f78e-9044-4d19-bffc-cf78b4917958"
+        "buildHookId": "5c9cabc0a3ae52327ac0fe10",
+        "siteId": "xxxx-xxxxx-xxxxx-xxxx-xxxxx"
       }
     }
-  ]
+  }
 }

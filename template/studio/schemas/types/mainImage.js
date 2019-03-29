@@ -11,24 +11,23 @@ export default {
       name: 'caption',
       type: 'string',
       options: {
-        isHighlighted: true,
-      },
+        isHighlighted: true
+      }
     },
     {
       name: 'alt',
       type: 'string',
       title: 'Alternative text',
-      description:
-        'Important for SEO and accessiblity.',
+      description: 'Important for SEO and accessiblity.',
       options: {
-        isHighlighted: true,
-      },
-    },
+        isHighlighted: true
+      }
+    }
   ],
   preview: {
     select: {
       imageUrl: 'asset.url',
-      title: 'caption',
-    },
-  },
+      title: 'caption'
+    }
+  }
 }

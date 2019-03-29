@@ -15,8 +15,7 @@ export default {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      description:
-        'Some frontends will require a slug to be set to be able to show the post',
+      description: 'Some frontends will require a slug to be set to be able to show the post',
       options: {
         source: 'title',
         maxLength: 96
@@ -26,19 +25,19 @@ export default {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',
-      description:
-        'This can be used to schedule post for publishing',
+      description: 'This can be used to schedule post for publishing'
     },
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'mainImage',
+      type: 'mainImage'
     },
     {
       name: 'excerpt',
       type: 'excerptPortableText',
       title: 'Excerpt',
-      description: 'This ends up on summary pages, on Google, when people share your post in social media.'
+      description:
+        'This ends up on summary pages, on Google, when people share your post in social media.'
     },
     {
       name: 'authors',
@@ -67,7 +66,7 @@ export default {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
-    },
+    }
   ],
   orderings: [
     {
@@ -106,15 +105,13 @@ export default {
       publishedAt: 'publishedAt',
       media: 'mainImage'
     },
-    prepare ({ title = 'No title', publishedAt, slug, media }) {
+    prepare ({title = 'No title', publishedAt, slug, media}) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/${dateSegment}/${slug.current}/`
       return {
         title,
         media,
-        subtitle: publishedAt
-          ? path
-          : 'Missing publishing date'
+        subtitle: publishedAt ? path : 'Missing publishing date'
       }
     }
   }

@@ -3,16 +3,15 @@
 
 .content {
   background: var(--color-white);
-  min-height: calc(100% - 74px - 120px);
+  min-height: calc(100% - 73px - 120px);
 
   @media (--media-min-small) {
-    min-height: calc(100% - 91px - 154px);
+    min-height: calc(100% - 91px - 155px);
   }
 }
 
 .footer {
-  background: var(--color-black);
-  color: var(--color-white);
+  border-top: 1px solid var(--color-black);
 }
 
 .footerWrapper {
