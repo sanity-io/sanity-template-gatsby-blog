@@ -3,7 +3,7 @@ import MdSettings from 'react-icons/lib/md/settings'
 import MdPerson from 'react-icons/lib/md/person'
 
 const hiddenDocTypes = listItem =>
-  !['category', 'person', 'post', 'siteSettings'].includes(listItem.getId())
+  !['category', 'author', 'post', 'siteSettings'].includes(listItem.getId())
 
 export default () =>
   S.list()
