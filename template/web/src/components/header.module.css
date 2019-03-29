@@ -4,9 +4,7 @@
 .root {
   position: relative;
   z-index: 100;
-  background: var(--color-black);
-  color: var(--color-white);
-  border-bottom: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-black);
 }
 
 .wrapper {
