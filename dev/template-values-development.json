@@ -5,7 +5,7 @@
     "private": false
   },
   "sanity": {
-    "dataset": "development",
+    "dataset": "blog",
     "projectId": "jmhf2rn8",
     "projectTitle": "Gatsby Blog (dev)"
   },
@@ -15,8 +15,7 @@
     "email": "marius@sanity.io"
   },
   "userInput": {},
-  "deployments": [
-    {
+  "deployments": [{
       "url": "http://sanity-gatsby-blog-studio-mikmcw27.netlify.com/",
       "name": "Studio",
       "provider": {
