@@ -20,21 +20,14 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 2em;
-
-  @media (--media-min-small) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (--media-min-medium) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
 }
 
 .browseMoreNav {
   composes: small from './typography.module.css';
-  margin-top: 1rem;
-  text-align: right;
+  margin-top: 2rem;
+  text-align: center;
 
   @nest & a {
     display: inline-block;

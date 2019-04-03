@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import {mapEdgesToNodes, filterOutDocsWithoutSlugs} from '../lib/helpers'
-import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
+import BlogPostPreviewList from '../components/blog-post-preview-list'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
@@ -84,7 +84,7 @@ const IndexPage = props => {
       <Container>
         <h1 hidden>Welcome to {site.title}</h1>
         {postNodes && (
-          <BlogPostPreviewGrid
+          <BlogPostPreviewList
             title='Latest blog posts'
             nodes={postNodes}
             browseMoreHref='/archive/'
