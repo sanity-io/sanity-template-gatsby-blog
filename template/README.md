@@ -2,7 +2,7 @@
 
 [![Create project on Sanity.io button]()](https://www.sanity.io/create?template=sanity-io%2Ftemplate-blog) [![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
 
-Create a blog using structured content and a static site builder.
+A blog powered by structured content and a static site builder.
 
 ## What you get
 
@@ -15,6 +15,9 @@ Create a blog using structured content and a static site builder.
 1. Clone this repository from your GitHub account
 2. `npm install` in the project root folder on local
 3. `npm run dev` to start the studio and frontend locally
+- Your studio should be running on [http://localhost:3333](http://localhost:3333)
+- Your frontend should be running on [http://localhost:8000](http://localhost:8000)
+
 4. `npm run build` to build to production locally
 
 ## Deploy changes
