@@ -16,6 +16,14 @@
           "cmd": "npm run build && cp ./netlify.toml dist",
           "dir": "studio/dist"
         }
+      },
+      "preview": {
+        "images": [
+          {
+            "src": "assets/preview-01.jpg",
+            "alt": "A preview image of the Content Studio."
+          }
+        ]
       }
     },
     {
@@ -40,7 +48,10 @@
       },
       "preview": {
         "images": [
-          { "src": "assets/preview-00.jpg", "alt": "A mock preview image" }
+          {
+            "src": "assets/preview-01.jpg",
+            "alt": "A preview image of the blog website."
+          }
         ]
       }
     }
