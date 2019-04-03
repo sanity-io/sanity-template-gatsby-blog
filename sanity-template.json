@@ -21,7 +21,7 @@
     {
       "id": "web",
       "type": "web",
-      "title": "Frontend",
+      "title": "Blog Website",
       "description": "A blazing fast blog, made for being easy to customize and update.",
       "dir": "./web",
       "requiredTokens": [
