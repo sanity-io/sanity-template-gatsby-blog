@@ -15,12 +15,12 @@ export default {
                 {
                   buildHookId: '<#<deployments.studio.provider.buildHookId>#>',
                   name: 'Content Studio',
-                  siteId: '<#<deployments.studio.provider.buildHookId>#>'
+                  siteId: '<#<deployments.studio.provider.siteId>#>'
                 },
                 {
                   buildHookId: '<#<deployments.web.provider.buildHookId>#>',
                   name: 'Content Studio',
-                  siteId: '<#<deployments.web.provider.buildHookId>#>'
+                  siteId: '<#<deployments.web.provider.siteId>#>'
                 }
               ]
             }
