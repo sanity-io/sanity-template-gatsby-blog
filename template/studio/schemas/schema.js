@@ -11,11 +11,11 @@ import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 
 // Object types
-import bodyPortableText from './types/bodyPortableText'
-import bioPortableText from './types/bioPortableText'
-import excerptPortableText from './types/excerptPortableText'
-import mainImage from './types/mainImage'
-import authorReference from './types/authorReference'
+import bodyPortableText from './objects/bodyPortableText'
+import bioPortableText from './objects/bioPortableText'
+import excerptPortableText from './objects/excerptPortableText'
+import mainImage from './objects/mainImage'
+import authorReference from './objects/authorReference'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
