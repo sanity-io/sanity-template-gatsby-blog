@@ -10,7 +10,6 @@ function AuthorList ({items, title}) {
       <h2 className={styles.headline}>{title}</h2>
       <ul className={styles.list}>
         {items.map(({author, _key}) => {
-          console.log(author)
           const authorName = author && author.name
           return (
             <li key={_key} className={styles.listItem}>
