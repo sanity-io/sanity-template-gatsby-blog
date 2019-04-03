@@ -5,10 +5,10 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
-import author from './author'
-import category from './category'
-import post from './post'
-import siteSettings from './siteSettings'
+import author from './documents/author'
+import category from './documents/category'
+import post from './documents/post'
+import siteSettings from './documents/siteSettings'
 
 // Object types
 import bodyPortableText from './types/bodyPortableText'
