@@ -46,6 +46,12 @@
       text-decoration: underline;
     }
   }
+
+  @media (--media-min-medium) {
+    @nest .inList & {
+      margin-top: 0;
+    }
+  }
 }
 
 .excerpt {
@@ -56,4 +62,10 @@
   @nest & strong {
     font-weight: 600;
   }
+}
+
+.date {
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-line-height);
+  color: var(--color-gray);
 }
