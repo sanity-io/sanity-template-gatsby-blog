@@ -1,4 +1,4 @@
-const {format} = require('date-fns')
+import {format} from 'date-fns'
 
 export default {
   type: 'document',
@@ -101,8 +101,8 @@ export default {
   preview: {
     select: {
       title: 'title',
-      slug: 'slug',
       publishedAt: 'publishedAt',
+      slug: 'slug',
       media: 'mainImage'
     },
     prepare ({title = 'No title', publishedAt, slug, media}) {
