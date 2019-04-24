@@ -17,20 +17,19 @@
   "userInput": {},
   "deployments": {
     "studio": {
-      "title": "Content Studio",
-      "url": "https://sanity-gatsby-blog2-studio-2wk163sh.netlify.com",
+      "url": "https://sanity-gatsby-blog-studio-rf4qpk9y.netlify.com/",
       "provider": {
         "name": "netlify",
-        "siteId": "xxxx-xxxxx-xxxxx-xxxx-xxxxx"
+        "buildHookId": "5cc04d5199df1802277a6e91",
+        "siteId": "b3b7bb87-000f-42a3-9ed3-83358be97dde"
       }
     },
     "web": {
-      "title": "Frontend",
-      "url": "https://sanity-gatsby-blog2-web.netlify.com",
+      "url": "https://sanity-gatsby-blog-web-skupqnos.netlify.com/",
       "provider": {
         "name": "netlify",
-        "buildHookId": "5c9cabc0a3ae52327ac0fe10",
-        "siteId": "xxxx-xxxxx-xxxxx-xxxx-xxxxx"
+        "buildHookId": "5caf2962008b0b042f8df19a",
+        "siteId": "7e740745-2e2e-4427-be81-aded75334337"
       }
     }
   }

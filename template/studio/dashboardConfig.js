@@ -9,7 +9,6 @@ export default {
           {
             name: 'netlify',
             options: {
-              title: 'Netlify',
               sites: [
                 {
                   buildHookId: '<#<deployments.studio.provider.buildHookId>#>',
@@ -18,7 +17,7 @@ export default {
                 },
                 {
                   buildHookId: '<#<deployments.web.provider.buildHookId>#>',
-                  name: 'Content Studio',
+                  name: 'Blog Website',
                   siteId: '<#<deployments.web.provider.siteId>#>'
                 }
               ]
