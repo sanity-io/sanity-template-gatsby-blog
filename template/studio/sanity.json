@@ -16,10 +16,10 @@
     "@sanity/desk-tool",
     "dashboard-widget-structure-menu",
     "dashboard-widget-document-list",
-    "dashboard-widget-netlify",
-    "dashboard-widget-welcome"
+    "dashboard-widget-netlify"
   ],
-  "parts": [{
+  "parts": [
+    {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema.js"
     },

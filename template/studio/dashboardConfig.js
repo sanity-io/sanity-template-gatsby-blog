@@ -1,8 +1,7 @@
 export default {
   widgets: [
-    {name: 'structure-menu'},
-    {name: 'welcome'},
     {name: 'sanity-tutorials'},
+    {name: 'structure-menu'},
     {
       name: 'project-info',
       options: {
@@ -25,17 +24,22 @@ export default {
               ]
             }
           }
+        ],
+        data: [
+          {
+            title: 'GitHub repo',
+            value: 'https://github.com/<#<repository.owner>#>/<#<repository.name>#>',
+            category: 'Code'
+          },
+          {title: 'Frontend', value: '<#<deployments.web.url>#>', category: 'apps'}
         ]
       }
     },
     {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: {title: 'Recently edited', order: '_updatedAt desc', limit: 10}
-    },
-    {
-      name: 'document-list',
-      options: {title: 'Recent blog posts', order: '_createdAt desc', limit: 10, types: ['post']}
+      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
+      layout: {width: 'medium'}
     }
   ]
 }

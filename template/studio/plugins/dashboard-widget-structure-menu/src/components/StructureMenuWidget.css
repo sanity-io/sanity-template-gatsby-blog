@@ -1,34 +1,38 @@
 @import 'part:@sanity/base/theme/variables-style';
 
 .root {
+  composes: container from "part:@sanity/dashboard/widget-styles";
+}
+
+.header {
+  composes: header from "part:@sanity/dashboard/widget-styles";
+}
+
+.title {
+  composes: title from "part:@sanity/dashboard/widget-styles";
+}
+
+.content {
   display: grid;
-  grid-gap: var(--medium-padding);
-  grid-template-columns: repeat(4, minmax(120px, 25%));
+  padding: var(--small-padding);
+  grid-gap: var(--small-padding);
+  grid-template-columns: 1fr 1fr;
   overflow-x: auto;
+  border-top: 1px solid var(--hairline-color);
+
+  @media (--screen-medium) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .link {
-  outline: none;
-  background: #fff;
+  composes: item from 'part:@sanity/base/theme/layout/selectable-style';
   display: block;
-  border-radius: 4px;
-  padding: var(--medium-padding);
+  border-radius: 2px;
+  padding: var(--small-padding);
   text-decoration: none;
   text-align: center;
-  color: inherit;
   box-sizing: border-box;
-
-  @media (hover: hover) {
-    @nest &:hover {
-      color: var(--brand-primary--inverted);
-      background-color: var(--default-button-primary-color);
-    }
-  }
-
-  @nest &:focus {
-    color: var(--brand-primary--inverted);
-    background-color: var(--default-button-primary-color);
-  }
 }
 
 .iconWrapper {

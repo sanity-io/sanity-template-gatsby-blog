@@ -1,7 +1,7 @@
 {
   "repository": {
-    "name": "dev-sanity-gatsby-blog",
-    "owner": "mariuslundgard",
+    "name": "sanity-gatsby-blog",
+    "owner": "sanity-io",
     "private": false
   },
   "sanity": {
