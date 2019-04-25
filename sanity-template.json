@@ -2,28 +2,42 @@
   "version": 1,
   "title": "Blog with Gatsby",
   "description": "The de facto blog template for Sanity with Gatsby.",
+  "previewMedia": {
+    "type": "image",
+    "src": "assets/preview-01.jpg",
+    "alt": "A screenshot of the Blog with Gatsby application."
+  },
+  "technologies": [
+    {
+      "id": "gatsby",
+      "name": "Gatsby",
+      "url": "https://www.gatsbyjs.org/"
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "url": "https://www.netlify.com/"
+    }
+  ],
   "deployments": [
     {
       "id": "studio",
       "type": "studio",
       "title": "Content Studio",
       "description": "The Content Studio is where you edit and structure your content.",
-      "dir": "./studio",
       "provider": {
         "name": "netlify",
         "config": {
           "base": "studio",
-          "cmd": "npm run build && cp ./netlify.toml dist",
-          "dir": "studio/dist"
-        }
+          "dir": "studio/dist",
+          "cmd": "npm run build && cp ./netlify.toml dist"
+        },
+        "requirements": ["build-hook"]
       },
-      "preview": {
-        "images": [
-          {
-            "src": "assets/preview-01.jpg",
-            "alt": "A preview image of the Content Studio."
-          }
-        ]
+      "previewMedia": {
+        "type": "image",
+        "src": "assets/preview-01.jpg",
+        "alt": "A preview image of the Content Studio."
       }
     },
     {
@@ -31,7 +45,6 @@
       "type": "web",
       "title": "Blog Website",
       "description": "A blazing fast blog, made for being easy to customize and update.",
-      "dir": "./web",
       "requiredTokens": [
         {
           "role": "deploy-studio",
@@ -40,34 +53,17 @@
       ],
       "provider": {
         "name": "netlify",
-        "requirements": ["build-hook"],
         "config": {
-          "cmd": "npm run build-web",
-          "dir": "web/public"
-        }
+          "dir": "web/public",
+          "cmd": "npm run build-web"
+        },
+        "requirements": ["build-hook"]
       },
-      "preview": {
-        "images": [
-          {
-            "src": "assets/preview-01.jpg",
-            "alt": "A preview image of the blog website."
-          }
-        ]
+      "previewMedia": {
+        "type": "image",
+        "src": "assets/preview-01.jpg",
+        "alt": "A preview image of the blog website."
       }
     }
-  ],
-  "metadata": {
-    "technologies": [
-      {
-        "id": "gatsby",
-        "name": "Gatsby",
-        "url": "https://www.gatsbyjs.org/"
-      },
-      {
-        "id": "netlify",
-        "name": "Netlify",
-        "url": "https://www.netlify.com/"
-      }
-    ]
-  }
+  ]
 }
