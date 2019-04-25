@@ -11,14 +11,14 @@ export default {
             options: {
               sites: [
                 {
-                  buildHookId: '<#<deployments.studio.provider.buildHookId>#>',
+                  buildHookId: '<#<deployments.studio.providerInfo.buildHookId>#>',
                   name: 'Content Studio',
-                  siteId: '<#<deployments.studio.provider.siteId>#>'
+                  siteId: '<#<deployments.studio.providerInfo.siteId>#>'
                 },
                 {
-                  buildHookId: '<#<deployments.web.provider.buildHookId>#>',
+                  buildHookId: '<#<deployments.web.providerInfo.buildHookId>#>',
                   name: 'Blog Website',
-                  siteId: '<#<deployments.web.provider.siteId>#>'
+                  siteId: '<#<deployments.web.providerInfo.siteId>#>'
                 }
               ]
             }
