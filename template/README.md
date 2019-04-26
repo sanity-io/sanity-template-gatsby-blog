@@ -1,6 +1,6 @@
 # <#< sanity.projectTitle >#>
 
-[![Create project on Sanity.io button]()](https://www.sanity.io/create?template=sanity-io%2Ftemplate-blog) [![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
+[![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
 
 A blog powered by structured content and a static site builder.
 
