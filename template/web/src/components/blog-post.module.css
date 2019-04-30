@@ -8,11 +8,13 @@
 }
 
 .mainImage {
+  display: block;
   position: relative;
   background: var(--color-very-light-gray);
   padding-bottom: calc(9 / 16 * 100%);
 
   @nest & img {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -24,11 +26,10 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 2em;
-
   @media (--media-min-medium) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2em;
     grid-template-columns: 3fr 1fr;
   }
 }
@@ -46,6 +47,15 @@
 
   @nest & h2, & h3, & h4, & h5, & h6 {
     font-weight: 600;
+  }
+
+  @nest & figure {
+    margin: 0;
+    padding: 0;
+
+    @nest & img {
+      max-width: 100%;
+    }
   }
 }
 
