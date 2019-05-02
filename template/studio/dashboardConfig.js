@@ -46,4 +46,4 @@ export default {
       layout: { width: 'medium' }
     }
   ]
-};
+}
