@@ -1,7 +1,7 @@
 # sanity-template-gatsby-blog
 
 
-This template repo is used by Sanity.io to easily create deployed and configured projects through a web interface. You can test it by [creating this project](https://create.sanity.io/?template=sanity-io/sanity-template-gatsby-blog).
+This template repo is used by Sanity.io to easily create deployed and configured projects through a web interface. You can test it by [creating this project](https://www.sanity.io/create?template=sanity-io%2Fsanity-template-gatsby-blog).
 
 The template contains both a Sanity.io Content Studio and a front-end in Gatsby. Both are deployed on Netlify.
 
