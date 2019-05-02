@@ -4,7 +4,7 @@
   "description": "The de facto blog template for Sanity with Gatsby.",
   "previewMedia": {
     "type": "image",
-    "src": "assets/preview-01.jpg",
+    "src": "assets/frontend.jpg",
     "alt": "A screenshot of the Blog with Gatsby application."
   },
   "technologies": [
@@ -61,7 +61,7 @@
       },
       "previewMedia": {
         "type": "image",
-        "src": "assets/preview-01.jpg",
+        "src": "assets/frontend.jpg",
         "alt": "A preview image of the blog website."
       }
     }
