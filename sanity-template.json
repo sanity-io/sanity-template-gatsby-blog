@@ -36,7 +36,7 @@
       },
       "previewMedia": {
         "type": "image",
-        "src": "assets/preview-01.jpg",
+        "src": "assets/studio.jpg",
         "alt": "A preview image of the Content Studio."
       }
     },
