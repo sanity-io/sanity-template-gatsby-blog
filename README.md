@@ -7,6 +7,8 @@ The template contains both a Sanity.io Content Studio and a front-end in Gatsby.
 
 Feel free to clone this template to create your own automagic project creation experiences.
 
+![The Sanity and Gatsby powered blog](https://github.com/sanity-io/sanity-template-gatsby-blog/blob/master/assets/frontend.jpg?raw=true)
+
 ## Local development
 
 You develop the templates in `/template`, and review your changes in `/build`.
