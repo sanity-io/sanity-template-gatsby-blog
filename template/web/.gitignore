@@ -70,3 +70,6 @@ yarn.lock
 # Lock files
 /package-lock.json
 /yarn.lock
+
+# Secrets
+.env.secrets
