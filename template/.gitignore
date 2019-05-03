@@ -10,3 +10,6 @@
 # Lock files
 /package-lock.json
 /yarn.lock
+
+# Environment files
+.env.development
