@@ -4,8 +4,8 @@ export default {
   title: 'Author reference',
   fields: [
     {
-      type: 'reference',
       name: 'author',
+      type: 'reference',
       to: [
         {
           type: 'author'

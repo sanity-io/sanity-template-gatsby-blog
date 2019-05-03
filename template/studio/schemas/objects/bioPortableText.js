@@ -4,8 +4,8 @@ export default {
   title: 'Excerpt',
   of: [
     {
-      title: 'Block',
       type: 'block',
+      title: 'Block',
       styles: [{title: 'Normal', value: 'normal'}],
       lists: [],
       marks: {

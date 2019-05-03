@@ -1,8 +1,8 @@
 import {format} from 'date-fns'
 
 export default {
-  type: 'document',
   name: 'post',
+  type: 'document',
   title: 'Blog Post',
   fields: [
     {
@@ -29,8 +29,8 @@ export default {
     },
     {
       name: 'mainImage',
-      title: 'Main image',
-      type: 'mainImage'
+      type: 'mainImage',
+      title: 'Main image'
     },
     {
       name: 'excerpt',
@@ -51,8 +51,8 @@ export default {
     },
     {
       name: 'categories',
-      title: 'Categories',
       type: 'array',
+      title: 'Categories',
       of: [
         {
           type: 'reference',
@@ -70,8 +70,8 @@ export default {
   ],
   orderings: [
     {
-      title: 'Publishing date new–>old',
       name: 'publishingDateAsc',
+      title: 'Publishing date new–>old',
       by: [
         {
           field: 'publishedAt',
@@ -84,8 +84,8 @@ export default {
       ]
     },
     {
-      title: 'Publishing date old->new',
       name: 'publishingDateDesc',
+      title: 'Publishing date old->new',
       by: [
         {
           field: 'publishedAt',
