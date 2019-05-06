@@ -5,7 +5,7 @@
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
-    "clean-cache": "rimraf .cache",
+    "clean-cache": "gatsby clean",
     "dev": "npm run clean-cache && gatsby develop",
     "lint": "eslint .",
     "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
@@ -33,7 +33,9 @@
     "prettier-eslint-cli": "^4.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "rimraf": "^2.6.3"
+    "react-helmet": "^5.2.1"
+  },
+  "dependencies": {
+    "gatsby-image": "^2.0.41"
   }
 }
