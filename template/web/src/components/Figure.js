@@ -4,7 +4,6 @@ import { getFluidGatsbyImage, getFixedGatsbyImage } from 'gatsby-source-sanity'
 import clientConfig from '../../client-config'
 
 export default ({ node }) => {
-  console.log(node)
   const fluidProps = getFluidGatsbyImage(
     node.asset._id,
     { maxWidth: 675 },
