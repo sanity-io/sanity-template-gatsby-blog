@@ -6,7 +6,7 @@ export default {
         templateRepoId: 'sanity-io/sanity-template-gatsby-blog'
       }
     },
-    { name: 'structure-menu' },
+    {name: 'structure-menu'},
     {
       name: 'project-info',
       options: {
@@ -14,6 +14,8 @@ export default {
           {
             name: 'netlify',
             options: {
+              description:
+                'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
               sites: [
                 {
                   buildHookId: '<#<deployments.studio.providerInfo.buildHookId>#>',
@@ -35,15 +37,15 @@ export default {
             value: 'https://github.com/<#<repository.owner>#>/<#<repository.name>#>',
             category: 'Code'
           },
-          { title: 'Frontend', value: '<#<deployments.web.url>#>', category: 'apps' }
+          {title: 'Frontend', value: '<#<deployments.web.url>#>', category: 'apps'}
         ]
       }
     },
-    { name: 'project-users', layout: { height: 'auto' } },
+    {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['post'] },
-      layout: { width: 'medium' }
+      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
+      layout: {width: 'medium'}
     }
   ]
 }
