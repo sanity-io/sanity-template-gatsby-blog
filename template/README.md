@@ -10,7 +10,7 @@ Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-i
 - Structured content using [Sanity.io](https://www.sanity.io)
 - Global deployment on [Netlify](https://netlify.com)
 
-### Quick start
+## Quick start
 
 1. Clone this repository from your GitHub account
 2. `npm install` in the project root folder on local
