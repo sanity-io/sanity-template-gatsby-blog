@@ -17,7 +17,6 @@ Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-i
 3. `npm run dev` to start the studio and frontend locally
    - Your studio should be running on [http://localhost:3333](http://localhost:3333)
    - Your frontend should be running on [http://localhost:8000](http://localhost:8000)
-
 4. `npm run build` to build to production locally
 
 ## Enable real-time content preview on development
