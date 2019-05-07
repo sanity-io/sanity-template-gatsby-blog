@@ -23,11 +23,11 @@ This will build the template files to `/build`. This is how the code will look f
 
 ### 3. Run `npm install` in `./build/web` and `sanity install` in `/build/studio`
 
-This will install the necessary dependencies for the Next.js frontend and the Studio.
+This will install the necessary dependencies for the Gatsby frontend and the Studio.
 
 ### 4. Run `npm run dev` in `./build/web` and `sanity start` in `/build/studio`
 
-This will start the development servers for the Next.js frontend and Sanity Studio.
+This will start the development servers for the Gatsby frontend and Sanity Studio.
 
 ## Notes
 
