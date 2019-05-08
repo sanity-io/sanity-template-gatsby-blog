@@ -63,7 +63,13 @@
         "type": "image",
         "src": "assets/frontend.jpg",
         "alt": "A preview image of the blog website."
-      }
+      },
+      "requiredCorsOrigins": [
+        {
+          "origin": "http://localhost:8000",
+          "allowCredentials": true
+        }
+      ]
     }
   ]
 }
