@@ -1,11 +1,11 @@
 {
   "version": 0,
   "title": "Blog with Gatsby",
-  "description": "The de facto blog template for Sanity with Gatsby.",
+  "description": "Fully customizable blog template with a React.js front-end.",
   "previewMedia": {
     "type": "image",
     "src": "assets/frontend.jpg",
-    "alt": "A screenshot of the Blog with Gatsby application."
+    "alt": "A screenshot of the Blog with Gatsby website."
   },
   "technologies": [
     {
