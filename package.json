@@ -10,6 +10,7 @@
     "export": "cd build/studio && sanity dataset export blog ../../data/production.tar.gz"
   },
   "devDependencies": {
+    "@sanity/cli": "^0.140.17",
     "sanity-template-tools": "^1.0.0-alpha.1"
   }
 }
