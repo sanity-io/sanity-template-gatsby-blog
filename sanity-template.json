@@ -55,6 +55,7 @@
       "provider": {
         "name": "netlify",
         "config": {
+          "base": "web",
           "dir": "web/public",
           "cmd": "npm run build-web"
         },
