@@ -19,6 +19,7 @@ function BlogPost (props) {
               .width(1200)
               .height(Math.floor((9 / 16) * 1200))
               .fit('crop')
+              .format('auto')
               .url()}
             alt={mainImage.alt}
           />
