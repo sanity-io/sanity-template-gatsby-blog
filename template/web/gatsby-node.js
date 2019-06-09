@@ -8,7 +8,7 @@ const { isFuture } = require('date-fns')
 const { format } = require('date-fns')
 
 async function createBlogPostPages (graphql, actions, reporter) {
-  const { createPage, createPageDependency } = actions
+  const { createPage } = actions
   const result = await graphql(`
     {
       allSanityPost(
@@ -45,8 +45,6 @@ async function createBlogPostPages (graphql, actions, reporter) {
         component: require.resolve('./src/templates/blog-post.js'),
         context: { id }
       })
-
-      createPageDependency({ path, nodeId: id })
     })
 }
 
