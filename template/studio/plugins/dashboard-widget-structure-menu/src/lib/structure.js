@@ -2,9 +2,7 @@
 
 import {defer, from as observableFrom, of as observableOf, throwError} from 'rxjs'
 import {mergeMap} from 'rxjs/operators'
-
-// eslint-disable-next-line import/no-commonjs
-const {StructureBuilder} = require('@sanity/structure')
+import StructureBuilder from '@sanity/desk-tool/structure-builder'
 
 let prevStructureError = null
 if (__DEV__) {
