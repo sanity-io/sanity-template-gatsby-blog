@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import {StaticQuery, graphql} from 'gatsby'
+import {imageUrlFor} from '../lib/image-url'
+import {buildImageObj} from '../lib/helpers'
 
-function SEO ({description, lang, meta, keywords, title}) {
+function SEO ({description, lang, meta, keywords, title, image}) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -11,6 +13,7 @@ function SEO ({description, lang, meta, keywords, title}) {
         const metaDescription = description || (data.site && data.site.description) || ''
         const siteTitle = (data.site && data.site.title) || ''
         const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
+        const metaImage = (image && image.asset) && imageUrlFor(buildImageObj(image)).width(1200).url() || ''
 
         return (
           <Helmet
@@ -33,6 +36,10 @@ function SEO ({description, lang, meta, keywords, title}) {
               {
                 property: 'og:type',
                 content: 'website'
+              },
+              {
+                property: 'og:image',
+                content: metaImage
               },
               {
                 name: 'twitter:card',

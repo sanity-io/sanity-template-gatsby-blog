@@ -5,6 +5,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import BlogPost from '../components/blog-post'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import { toPlainText } from '../lib/helpers'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -23,6 +24,7 @@ export const query = graphql`
       slug {
         current
       }
+      _rawExcerpt(resolveReferences: {maxDepth: 5})
       _rawBody(resolveReferences: {maxDepth: 5})
       authors {
         _key
@@ -61,7 +63,7 @@ const BlogPostTemplate = props => {
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
-      {post && <SEO title={post.title || 'Untitled'} />}
+      {post && <SEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage} />}
 
       {errors && (
         <Container>
