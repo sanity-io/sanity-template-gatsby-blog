@@ -12,7 +12,7 @@ export default ({ node }) => {
   return (
     <figure>
       <Img fluid={fluidProps} alt={node.alt} />
-      <caption>{node.caption}</caption>
+      <figcaption>{node.caption}</figcaption>
     </figure>
   )
 }
