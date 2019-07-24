@@ -29,9 +29,8 @@
       "provider": {
         "name": "netlify",
         "config": {
-          "base": "studio",
           "dir": "studio/dist",
-          "cmd": "npm run build && cp ./netlify.toml dist"
+          "cmd": "npm run build-studio && cp ./studio/netlify.toml ./studio/dist"
         },
         "requirements": ["build-hook"]
       },
