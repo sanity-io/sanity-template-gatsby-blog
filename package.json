@@ -10,6 +10,12 @@
     "export": "cd build/studio && sanity dataset export blog ../../data/production.tar.gz"
   },
   "devDependencies": {
-    "sanity-template-tools": "^1.0.0-alpha.1"
+    "sanity-template-tools": "^1.0.0-alpha.1",
+    "husky": "^3.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "([ -z \"$SKIP_HOOK\" ] && sanity-template lockfiles && git add '*package-lock.json*' && git diff --quiet && SKIP_HOOK=1 git commit -m 'Generate lockfiles') && echo 'Committed lockfiles' || echo ''"
+    }
   }
 }
