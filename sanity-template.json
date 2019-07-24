@@ -29,9 +29,8 @@
       "provider": {
         "name": "netlify",
         "config": {
-          "base": "studio",
           "dir": "studio/dist",
-          "cmd": "npm run build && cp ./netlify.toml dist"
+          "cmd": "npm run build-studio && cp ./studio/netlify.toml ./studio/dist"
         },
         "requirements": ["build-hook"]
       },
@@ -46,6 +45,7 @@
       "type": "web",
       "title": "Blog Website",
       "description": "A blazing fast blog, made for being easy to customize and update.",
+      "dir": "./web",
       "requiredTokens": [
         {
           "role": "deploy-studio",
