@@ -11,7 +11,7 @@
     "lint-build": "npm run build && (cd build && npm install && npm run lint)"
   },
   "devDependencies": {
-    "husky": "^3.0.1",
+    "husky": "^3.0.2",
     "sanity-template": "^1.0.3"
   },
   "husky": {
