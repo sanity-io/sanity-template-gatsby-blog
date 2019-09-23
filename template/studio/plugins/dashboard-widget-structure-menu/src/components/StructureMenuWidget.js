@@ -19,10 +19,7 @@ function StructureMenuWidget (props) {
 
       <div className={styles.content}>
         {props.structure.items
-          .reduce((itemsWithoutDividers, item) => {
-            if (item.type !== 'divider') itemsWithoutDividers.push(item)
-            return itemsWithoutDividers
-          }, [])
+          .filter(item => item.type !== 'divider')
           .map(item => {
             const Icon = getIconComponent(item)
             return (
