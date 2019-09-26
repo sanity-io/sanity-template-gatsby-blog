@@ -2,6 +2,7 @@
   "private": true,
   "name": "sanity-template-gatsby-blog",
   "scripts": {
+    "build-preview": "sanity-template build --template-values dev/template-values-production.json && cd build && npm install && npm run build",
     "build": "sanity-template build --template-values dev/template-values-production.json",
     "copy-node-modules": "npm run copy-studio-node-modules && npm run copy-web-node-modules",
     "copy-studio-node-modules": "cp -R build/studio/node_modules template/studio/node_modules",
