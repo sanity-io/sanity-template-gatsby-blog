@@ -14,7 +14,7 @@ update_configs:
 
     automerged_updates:
       - match:
-          dependency_type: "development"
+          dependency_type: "all"
           dependency_name: "@sanity/*"
       - match:
           dependency_type: "production"
