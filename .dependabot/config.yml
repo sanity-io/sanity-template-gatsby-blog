@@ -3,6 +3,8 @@ update_configs:
   - package_manager: "javascript"
     directory: "/template"
     update_schedule: "live"
+    default_labels:
+      - "dependabot"
     automerged_updates:
       - match:
           dependency_name: "@sanity/*"
