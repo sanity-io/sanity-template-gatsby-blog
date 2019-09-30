@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "<#< repository.name >#>-studio",
+  "name": "sanity-gatsby-blog-studio",
   "version": "1.0.0",
   "main": "package.json",
   "author": "Sanity <hello@sanity.io>",
