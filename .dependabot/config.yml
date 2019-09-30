@@ -2,18 +2,20 @@ version: 1
 update_configs:
   - package_manager: "javascript"
     directory: "/template"
-    update_schedule: "live"
+    update_schedule: "daily"
     default_labels:
       - "dependabot"
     allowed_updates:
       - match:
-          dependency_type: "direct"
-          update_type: "all"
-      - match:
-          dependency_type: "indirect"
+          dependency_type: "all"
           update_type: "security"
+      - match:
+          dependency_name: "@sanity/*"
 
     automerged_updates:
       - match:
           dependency_type: "development"
           dependency_name: "@sanity/*"
+      - match:
+          dependency_type: "production"
+          update_type: "security:patch"
