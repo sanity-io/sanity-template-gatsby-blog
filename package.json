@@ -2,6 +2,8 @@
   "private": true,
   "name": "sanity-template-gatsby-blog",
   "scripts": {
+    "netlify:build-studio": "npm run build && cd build && npm install && npm run build-studio && cp studio/netlify.toml studio/dist",
+    "netlify:build-web": "npm run build && cd build && npm install && npm run build-web",
     "build": "sanity-template build --template-values dev/template-values-production.json",
     "copy-node-modules": "npm run copy-studio-node-modules && npm run copy-web-node-modules",
     "copy-studio-node-modules": "cp -R build/studio/node_modules template/studio/node_modules",

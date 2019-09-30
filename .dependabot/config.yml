@@ -6,4 +6,3 @@ update_configs:
     automerged_updates:
       - match:
           dependency_name: "@sanity/*"
-          update_type: "all"
