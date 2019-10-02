@@ -10,8 +10,9 @@
       "packagePatterns": ["^@sanity/", "sanity-plugin-*"],
       "groupName": "Sanity packages",
       "enabled": true,
+      "automerge": true,
       "extends": [
-        ":automergeMajor"
+        ":automergeMinor"
       ],
       "lockFileMaintenance": { "enabled": true }
     }
