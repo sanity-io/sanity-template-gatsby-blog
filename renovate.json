@@ -1,5 +1,19 @@
 {
-  "extends": [
-    "config:base"
+  "updateLockFiles": true,
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "enabled": false
+    },
+    {
+      "packagePatterns": ["^@sanity/", "sanity-plugin-*"],
+      "groupName": "Sanity packages",
+      "enabled": true,
+      "extends": [
+        ":automergeMajor"
+      ],
+      "lockFileMaintenance": { "enabled": true }
+    }
   ]
 }
