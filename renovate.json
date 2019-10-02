@@ -1,6 +1,7 @@
 {
   "updateLockFiles": true,
   "rangeStrategy": "bump",
+  "bumpVersion": "patch",
   "packageRules": [
     {
       "packagePatterns": ["*"],
