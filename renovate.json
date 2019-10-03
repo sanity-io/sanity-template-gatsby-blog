@@ -1,21 +1,3 @@
 {
-  "updateLockFiles": true,
-  "rangeStrategy": "bump",
-  "bumpVersion": "patch",
-  "packageRules": [
-    {
-      "packagePatterns": ["*"],
-      "enabled": false
-    },
-    {
-      "packagePatterns": ["^@sanity/", "sanity-plugin-*"],
-      "groupName": "Sanity packages",
-      "enabled": true,
-      "automerge": true,
-      "extends": [
-        ":automergeMinor"
-      ],
-      "lockFileMaintenance": { "enabled": true }
-    }
-  ]
+  "extends": ["github>sanity-io/renovate-presets:sanity-template"]
 }
