@@ -29,9 +29,9 @@
       "provider": {
         "name": "netlify",
         "config": {
-          "base": "studio",
-          "dir": "dist",
-          "cmd": "npm run build-studio && cp ./studio/netlify.toml ./studio/dist"
+          "base": "/",
+          "dir": "/studio/dist",
+          "cmd": "npm run build-studio && cp studio/netlify.toml studio/dist"
         },
         "requirements": ["build-hook"]
       },
@@ -56,8 +56,8 @@
       "provider": {
         "name": "netlify",
         "config": {
-          "base": "web",
-          "dir": "public",
+          "base": "/",
+          "dir": "/web/public",
           "cmd": "npm run build-web"
         },
         "requirements": ["build-hook"]
@@ -70,7 +70,7 @@
       "requiredCorsOrigins": [
         {
           "origin": "http://localhost:8000",
-          "allowCredentials": true
+          "allowCredentials": false
         }
       ]
     }
