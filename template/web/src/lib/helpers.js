@@ -33,6 +33,9 @@ export function buildImageObj (source = {asset: {}}) {
 }
 
 export function toPlainText (blocks) {
+  if (!blocks) {
+    return ''
+  }
   return blocks
     .map(block => {
       if (block._type !== 'block' || !block.children) {
