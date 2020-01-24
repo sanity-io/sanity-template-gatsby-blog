@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sanity-gatsby-blog-studio",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "package.json",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
@@ -26,7 +26,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "sanity-plugin-dashboard-widget-document-list": "^0.0.8",
+    "sanity-plugin-dashboard-widget-document-list": "^0.0.9",
     "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
   },
   "devDependencies": {
