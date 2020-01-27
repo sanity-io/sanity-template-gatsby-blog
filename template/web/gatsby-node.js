@@ -7,7 +7,7 @@ const {isFuture} = require('date-fns')
 
 const {format} = require('date-fns')
 
-async function createBlogPostPages (graphql, actions, reporter) {
+async function createBlogPostPages (graphql, actions) {
   const {createPage} = actions
   const result = await graphql(`
     {
@@ -38,8 +38,6 @@ async function createBlogPostPages (graphql, actions, reporter) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/blog/${dateSegment}/${slug.current}/`
 
-      reporter.info(`Creating blog post page: ${path}`)
-
       createPage({
         path,
         component: require.resolve('./src/templates/blog-post.js'),
@@ -48,6 +46,6 @@ async function createBlogPostPages (graphql, actions, reporter) {
     })
 }
 
-exports.createPages = async ({graphql, actions, reporter}) => {
-  await createBlogPostPages(graphql, actions, reporter)
+exports.createPages = async ({graphql, actions}) => {
+  await createBlogPostPages(graphql, actions)
 }
