@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sanity-gatsby-blog-studio",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "package.json",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
@@ -13,15 +13,15 @@
     "test": "sanity check"
   },
   "dependencies": {
-    "@sanity/base": "^0.147",
-    "@sanity/cli": "^0.147",
-    "@sanity/components": "^0.147",
-    "@sanity/core": "^0.147",
-    "@sanity/dashboard": "^0.147",
-    "@sanity/default-layout": "^0.147",
-    "@sanity/default-login": "^0.147",
-    "@sanity/desk-tool": "^0.147",
-    "@sanity/studio-hints": "^0.147",
+    "@sanity/base": "^1.148",
+    "@sanity/cli": "^1.148",
+    "@sanity/components": "^1.148",
+    "@sanity/core": "^1.148",
+    "@sanity/dashboard": "^1.148",
+    "@sanity/default-layout": "^1.148",
+    "@sanity/default-login": "^1.148",
+    "@sanity/desk-tool": "^1.148",
+    "@sanity/studio-hints": "^1.148",
     "date-fns": "^1.30.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
