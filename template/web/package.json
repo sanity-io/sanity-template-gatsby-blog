@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sanity-gatsby-blog-web",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
@@ -18,7 +18,7 @@
     "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-config-standard-react": "^7.0.2",
+    "eslint-config-standard-react": "^9.2.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.1.1",
@@ -33,7 +33,7 @@
     "prettier-eslint-cli": "^4.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^6.0.0"
   },
   "dependencies": {
     "gatsby-image": "^2.0.41"
