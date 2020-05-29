@@ -1,5 +1,5 @@
 {
-  "version": 0,
+  "version": 1,
   "title": "Blog with Gatsby",
   "description": "Fully customizable blog template with a React.js front-end.",
   "previewMedia": {
@@ -19,60 +19,56 @@
       "url": "https://www.netlify.com/"
     }
   ],
-  "deployments": [
-    {
-      "id": "studio",
-      "type": "studio",
-      "title": "Sanity Studio",
-      "description": "The Sanity Studio is where you edit and structure your content.",
-      "dir": "./studio",
-      "provider": {
-        "name": "netlify",
-        "config": {
-          "base": "/",
-          "dir": "/studio/dist",
-          "cmd": "npm run build-studio && cp studio/netlify.toml studio/dist"
-        },
-        "requirements": ["build-hook"]
-      },
-      "previewMedia": {
-        "type": "image",
-        "src": "assets/studio.jpg",
-        "alt": "A preview image of the Sanity Studio."
-      }
-    },
-    {
-      "id": "web",
-      "type": "web",
-      "title": "Blog Website",
-      "description": "A blazing fast blog, made for being easy to customize and update.",
-      "dir": "./web",
-      "requiredTokens": [
+  "deployments": {
+    "netlify": {
+      "sites": [
         {
-          "role": "deploy-studio",
-          "label": "GraphQL API Deployer"
-        }
-      ],
-      "provider": {
-        "name": "netlify",
-        "config": {
-          "base": "/",
-          "dir": "/web/public",
-          "cmd": "npm run build-web"
+          "id": "studio",
+          "title": "Sanity Studio",
+          "description": "The Sanity Studio is where you edit and structure your content.",
+          "dir": "./studio",
+          "previewMedia": {
+            "type": "image",
+            "src": "assets/studio.jpg",
+            "alt": "A preview image of the Sanity Studio."
+          },
+          "buildSettings": {
+            "base": "/",
+            "dir": "/studio/dist",
+            "cmd": "npm run build-studio && cp studio/netlify.toml studio/dist"
+          },
+          "requirements": ["build-hook"]
         },
-        "requirements": ["build-hook"]
-      },
-      "previewMedia": {
-        "type": "image",
-        "src": "assets/frontend.jpg",
-        "alt": "A preview image of the blog website."
-      },
-      "requiredCorsOrigins": [
         {
-          "origin": "http://localhost:8000",
-          "allowCredentials": false
+          "id": "web",
+          "title": "Blog Website",
+          "requirements": ["build-hook"],
+          "description": "A blazing fast blog, made for being easy to customize and update.",
+          "dir": "./web",
+          "buildSettings": {
+            "base": "/",
+            "dir": "/web/public",
+            "cmd": "npm run build-web"
+          },
+          "requiredTokens": [
+            {
+              "role": "deploy-studio",
+              "label": "GraphQL API Deployer"
+            }
+          ],
+          "previewMedia": {
+            "type": "image",
+            "src": "assets/frontend.jpg",
+            "alt": "A preview image of the blog website."
+          },
+          "requiredCorsOrigins": [
+            {
+              "origin": "http://localhost:8000",
+              "allowCredentials": false
+            }
+          ]
         }
       ]
     }
-  ]
+  }
 }
