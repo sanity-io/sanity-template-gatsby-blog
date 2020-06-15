@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 12,
   "title": "Blog with Gatsby",
   "description": "Fully customizable blog template with a React.js front-end.",
   "previewMedia": {
@@ -45,7 +45,8 @@
         "id": "web",
         "title": "Blog Website",
         "requirements": [
-          "build-hook"
+          "build-hook",
+          "blahblah"
         ],
         "description": "A blazing fast blog, made for being easy to customize and update.",
         "dir": "./web",
