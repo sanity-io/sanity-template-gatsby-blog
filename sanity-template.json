@@ -45,8 +45,7 @@
         "id": "web",
         "title": "Blog Website",
         "requirements": [
-          "build-hook",
-          "blahblah"
+          "build-hook"
         ],
         "description": "A blazing fast blog, made for being easy to customize and update.",
         "dir": "./web",
