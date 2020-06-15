@@ -4,8 +4,7 @@
   "description": "Fully customizable blog template with a React.js front-end.",
   "previewMedia": {
     "type": "image",
-    "src": "assets/frontend.jpg",
-    "alt": "A screenshot of the Blog with Gatsby website."
+    "src": "assets/frontend.jpg"
   },
   "technologies": [
     {
