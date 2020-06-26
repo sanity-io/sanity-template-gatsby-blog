@@ -2,7 +2,7 @@
 @import '../styles/custom-properties.css';
 
 .root {
-  display: blog;
+  display: block;
   color: inherit;
   text-decoration: none;
 }
