@@ -24,6 +24,7 @@
     "sites": [
       {
         "id": "studio",
+        "type": "studio",
         "title": "Sanity Studio",
         "description": "The Sanity Studio is where you edit and structure your content.",
         "dir": "./studio",
@@ -43,6 +44,7 @@
       },
       {
         "id": "web",
+        "type": "web",
         "title": "Blog Website",
         "requirements": [
           "build-hook"
