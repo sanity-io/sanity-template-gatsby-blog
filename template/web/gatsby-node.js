@@ -68,13 +68,13 @@ async function createCategoryPages (graphql, actions) {
 
   categoryNodes.forEach(node => {
     const {id, slug} = node.node
-    if (!id) return 'No category id!'
+    if (!id || !slug.current) return 'No category id or slug!'
 
     const path = `/category/${slug.current}`
 
     createPage({
       path,
-      component: require.resolve('./src/pages/category.js'),
+      component: require.resolve('./src/templates/category.js'),
       context: {id}
     })
   })
