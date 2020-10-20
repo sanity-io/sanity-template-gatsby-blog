@@ -11,9 +11,7 @@ async function createBlogPostPages (graphql, actions) {
   const {createPage} = actions
   const result = await graphql(`
     {
-      allSanityPost(
-        filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-      ) {
+      allSanityPost(filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
         edges {
           node {
             id
@@ -46,6 +44,70 @@ async function createBlogPostPages (graphql, actions) {
     })
 }
 
+async function createCategoryPages (graphql, actions) {
+  const {createPage} = actions
+
+  const result = await graphql(`
+    {
+      allSanityCategory {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const categoryNodes = (result.data.allSanityCategory || {}).edges || []
+
+  categoryNodes.forEach(node => {
+    const {id, slug} = node.node
+    if (!id) return 'No category id!'
+
+    const path = `/category/${slug.current}`
+
+    createPage({
+      path,
+      component: require.resolve('./src/pages/category.js'),
+      context: {id}
+    })
+  })
+}
+
+exports.createResolvers = ({createResolvers}) => {
+  const resolvers = {
+    SanityCategory: {
+      posts: {
+        type: ['SanityPost'],
+        resolve (source, args, context, info) {
+          return context.nodeModel.runQuery({
+            type: 'SanityPost',
+            query: {
+              filter: {
+                categories: {
+                  elemMatch: {
+                    _id: {
+                      eq: source._id
+                    }
+                  }
+                }
+              }
+            }
+          })
+        }
+      }
+    }
+  }
+  createResolvers(resolvers)
+}
+
 exports.createPages = async ({graphql, actions}) => {
   await createBlogPostPages(graphql, actions)
+  await createCategoryPages(graphql, actions)
 }

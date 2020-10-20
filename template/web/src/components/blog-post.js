@@ -1,5 +1,6 @@
 import {format, distanceInWords, differenceInDays} from 'date-fns'
 import React from 'react'
+import {Link} from 'gatsby'
 import {buildImageObj} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
@@ -44,9 +45,14 @@ function BlogPost (props) {
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Categories</h3>
                 <ul>
-                  {categories.map(category => (
-                    <li key={category._id}>{category.title}</li>
-                  ))}
+                  {categories.map(category => {
+                    const categoryUrl = `/category/${category.slug.current}`
+                    return (
+                      <li key={category._id}>
+                        <Link to={categoryUrl}>{category.title}</Link>
+                      </li>
+                    )
+                  })}
                 </ul>
               </div>
             )}
