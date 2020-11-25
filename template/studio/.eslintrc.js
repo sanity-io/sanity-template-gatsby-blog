@@ -14,7 +14,7 @@ module.exports = {
     'react/prop-types': 0,
     'object-curly-spacing': ['error', 'never']
   },
-  extends: ["eslint:recommended", "plugin:react/recommended"],
+  extends: ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
   settings: {
     react: {
       pragma: 'React',
