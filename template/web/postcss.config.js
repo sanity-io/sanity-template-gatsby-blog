@@ -4,15 +4,15 @@ module.exports = () => ({
     require('postcss-preset-env')({
       stage: 3,
       features: {
-        'color-mod-function': {unresolved: 'warn'},
+        'color-mod-function': { unresolved: 'warn' },
         'nesting-rules': true,
         'custom-media-queries': {
-          preserve: false
+          preserve: false,
         },
         'custom-properties': {
-          preserve: false
-        }
-      }
-    })
-  ]
+          preserve: false,
+        },
+      },
+    }),
+  ],
 })

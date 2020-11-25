@@ -1,9 +1,9 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
+  filterOutDocsPublishedInTheFuture,
 } from '../lib/helpers'
 import BlogPostPreviewList from '../components/blog-post-preview-list'
 import Container from '../components/container'
@@ -64,8 +64,8 @@ export const query = graphql`
   }
 `
 
-const IndexPage = props => {
-  const {data, errors} = props
+const IndexPage = (props) => {
+  const { data, errors } = props
 
   if (errors) {
     return (
@@ -78,8 +78,8 @@ const IndexPage = props => {
   const site = (data || {}).site
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
+        .filter(filterOutDocsWithoutSlugs)
+        .filter(filterOutDocsPublishedInTheFuture)
     : []
 
   if (!site) {
@@ -99,9 +99,9 @@ const IndexPage = props => {
         <h1 hidden>Welcome to {site.title}</h1>
         {postNodes && (
           <BlogPostPreviewList
-            title='Latest blog posts'
+            title="Latest blog posts"
             nodes={postNodes}
-            browseMoreHref='/archive/'
+            browseMoreHref="/archive/"
           />
         )}
       </Container>

@@ -1,15 +1,15 @@
 import React from 'react'
-import {buildImageObj} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
+import { buildImageObj } from '../lib/helpers'
+import { imageUrlFor } from '../lib/image-url'
 
 import styles from './author-list.module.css'
 
-function AuthorList ({items, title}) {
+function AuthorList({ items, title }) {
   return (
     <div className={styles.root}>
       <h2 className={styles.headline}>{title}</h2>
       <ul className={styles.list}>
-        {items.map(({author, _key}) => {
+        {items.map(({ author, _key }) => {
           const authorName = author && author.name
           return (
             <li key={_key} className={styles.listItem}>
@@ -22,7 +22,7 @@ function AuthorList ({items, title}) {
                         .height(100)
                         .fit('crop')
                         .url()}
-                      alt=''
+                      alt=""
                     />
                   )}
                 </div>
