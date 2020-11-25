@@ -1,4 +1,5 @@
 module.exports = {
+  parser: 'babel-eslint',
   extends: [
     'standard',
     'standard-react',
@@ -13,7 +14,7 @@ module.exports = {
   settings: {
     react: {
       pragma: 'React',
-      version: '16.8.4'
+      version: '16.8.4',
     },
   },
 }
