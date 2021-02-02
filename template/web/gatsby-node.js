@@ -13,7 +13,7 @@ async function createBlogPostPages (graphql, actions) {
     {
       allSanityPost(
         filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-      ) {
+        ) {
         edges {
           node {
             id
@@ -29,7 +29,7 @@ async function createBlogPostPages (graphql, actions) {
 
   if (result.errors) throw result.errors
 
-  const postEdges = (result.data.allSanityPost || {}).edges || []
+  const postEdges = result.data.allSanityPost?.edges || []
 
   postEdges
     .filter(edge => !isFuture(edge.node.publishedAt))
@@ -46,6 +46,73 @@ async function createBlogPostPages (graphql, actions) {
     })
 }
 
+async function createCategoryPages (graphql, actions, reporter) {
+  const {createPage} = actions
+
+  const result = await graphql(`
+    {
+      allSanityCategory {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const categoryNodes = result.data.allSanityCategory?.edges || []
+
+  categoryNodes.forEach(node => {
+    const {id, slug} = node.node
+    if (!id || !slug.current) {
+      reporter.warn(
+        `Couldn't find any categories. Make sure categories in Sanity have ids and slugs.`
+      )
+      return
+    }
+
+    const path = `/category/${slug.current}`
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/category.js'),
+      context: {id}
+    })
+  })
+}
+
+exports.createResolvers = ({createResolvers}) => {
+  const resolvers = {
+    SanityCategory: {
+      posts: {
+        type: ['SanityPost'],
+        resolve (source, args, context, info) {
+          return context.nodeModel.runQuery({
+            type: 'SanityPost',
+            query: {
+              filter: {
+                categories: {
+                  elemMatch: {
+                    _id: {
+                      eq: source._id
+                    }
+                  }
+                }
+              }
+            }
+          })
+        }
+      }
+    }
+  }
+  createResolvers(resolvers)
+}
+
 exports.createPages = async ({graphql, actions}) => {
   await createBlogPostPages(graphql, actions)
+  await createCategoryPages(graphql, actions)
 }

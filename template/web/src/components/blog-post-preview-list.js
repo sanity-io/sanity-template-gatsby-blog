@@ -4,7 +4,7 @@ import BlogPostPreview from './blog-post-preview'
 
 import styles from './blog-post-preview-list.module.css'
 
-function BlogPostPreviewGrid (props) {
+function BlogPostPreviewList (props) {
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
@@ -25,10 +25,10 @@ function BlogPostPreviewGrid (props) {
   )
 }
 
-BlogPostPreviewGrid.defaultProps = {
+BlogPostPreviewList.defaultProps = {
   title: '',
   nodes: [],
   browseMoreHref: ''
 }
 
-export default BlogPostPreviewGrid
+export default BlogPostPreviewList
