@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sanity-gatsby-blog-web",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
@@ -31,8 +31,8 @@
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.6.0",
     "prettier-eslint-cli": "^4.7.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-helmet": "^5.2.1"
   },
   "dependencies": {
