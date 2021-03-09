@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "post-commit": "([ -z \"$SKIP_HOOK\" ] && sanity-template lockfiles && git add '*package-lock.json*' && git diff --quiet && SKIP_HOOK=1 git commit -m 'Generate lockfiles') && echo 'Committed lockfiles' || echo ''"
+      "pre-push": "([ -z \"$SKIP_HOOK\" ] && sanity-template lockfiles && git add '*package-lock.json*' && git diff --quiet && SKIP_HOOK=1 git commit -m 'Generate lockfiles') && echo 'Committed lockfiles' || echo ''"
     }
   }
 }
