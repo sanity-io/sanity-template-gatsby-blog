@@ -1,16 +1,24 @@
-const path = require('path')
-
 module.exports = {
-  extends: ['standard', 'standard-react'],
-  parser: 'babel-eslint',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 2018,
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  env: {
+    node: true,
+    browser: true
+  },
   rules: {
     'react/prop-types': 0,
     'object-curly-spacing': ['error', 'never']
   },
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   settings: {
     react: {
       pragma: 'React',
-      version: '16.2.0'
+      version: 'detect'
     }
   }
 }
