@@ -1,9 +1,9 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import {
-  mapEdgesToNodes,
+  filterOutDocsPublishedInTheFuture,
   filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
+  mapEdgesToNodes
 } from '../lib/helpers'
 import BlogPostPreviewList from '../components/blog-post-preview-list'
 import Container from '../components/container'
