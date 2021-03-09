@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "sanity-gatsby-blog-web",
+  "name": "blog-with-gatsby-web",
   "version": "1.0.6",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
