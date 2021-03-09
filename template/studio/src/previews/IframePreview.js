@@ -16,7 +16,7 @@ const assemblePostUrl = ({ displayed, options }) => {
     console.warn('Missing slug or previewURL', { slug, previewURL })
     return ''
   }
-  const dateSegment = format(publishedAt, 'YYYY/MM')
+  const dateSegment = format(new Date(publishedAt), 'yyyy/MM')
   const path = `/${dateSegment}/${slug.current}/`
   return `${previewURL}/blog${path}`
 }
