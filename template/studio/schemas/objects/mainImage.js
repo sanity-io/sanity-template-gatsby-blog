@@ -3,7 +3,7 @@ export default {
   type: "image",
   title: "Image",
   options: {
-    hotspot: true
+    hotspot: true,
   },
   fields: [
     {
@@ -11,25 +11,25 @@ export default {
       type: "string",
       title: "Caption",
       options: {
-        isHighlighted: true
-      }
+        isHighlighted: true,
+      },
     },
     {
       name: "alt",
       type: "string",
       title: "Alternative text",
       description: "Important for SEO and accessiblity.",
-      validation: Rule =>
+      validation: (Rule) =>
         Rule.error("You have to fill out the alternative text.").required(),
       options: {
-        isHighlighted: true
-      }
-    }
+        isHighlighted: true,
+      },
+    },
   ],
   preview: {
     select: {
       imageUrl: "asset.url",
-      title: "caption"
-    }
-  }
+      title: "caption",
+    },
+  },
 };

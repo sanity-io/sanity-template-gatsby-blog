@@ -16,32 +16,32 @@ export default {
                     "<#<deployments.studio.providerInfo.buildHookId>#>",
                   title: "Sanity Studio",
                   name: "<#<deployments.studio.providerInfo.siteName>#>",
-                  apiId: "<#<deployments.studio.providerInfo.siteId>#>"
+                  apiId: "<#<deployments.studio.providerInfo.siteId>#>",
                 },
                 {
                   buildHookId: "<#<deployments.web.providerInfo.buildHookId>#>",
                   title: "Blog Website",
                   name: "<#<deployments.web.providerInfo.siteName>#>",
-                  apiId: "<#<deployments.web.providerInfo.siteId>#>"
-                }
-              ]
-            }
-          }
+                  apiId: "<#<deployments.web.providerInfo.siteId>#>",
+                },
+              ],
+            },
+          },
         ],
         data: [
           {
             title: "GitHub repo",
             value:
               "https://github.com/<#<repository.owner>#>/<#<repository.name>#>",
-            category: "Code"
+            category: "Code",
           },
           {
             title: "Frontend",
             value: "<#<deployments.web.url>#>",
-            category: "apps"
-          }
-        ]
-      }
+            category: "apps",
+          },
+        ],
+      },
     },
     { name: "project-users", layout: { height: "auto" } },
     {
@@ -49,9 +49,9 @@ export default {
       options: {
         title: "Recent blog posts",
         order: "_createdAt desc",
-        types: ["post"]
+        types: ["post"],
       },
-      layout: { width: "medium" }
-    }
-  ]
+      layout: { width: "medium" },
+    },
+  ],
 };

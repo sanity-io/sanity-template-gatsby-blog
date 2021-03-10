@@ -9,7 +9,7 @@ const localURL = "http://localhost:8000";
 const previewURL =
   window.location.hostname === "localhost" ? localURL : remoteURL;
 
-export const getDefaultDocumentNode = props => {
+export const getDefaultDocumentNode = (props) => {
   /**
    * Here you can define fallback views for document types without
    * a structure definition for the document node. If you want different
@@ -24,7 +24,7 @@ export const getDefaultDocumentNode = props => {
       S.view
         .component(IframePreview)
         .title("Web preview")
-        .options({ previewURL })
+        .options({ previewURL }),
     ]);
   }
   return S.document().views([S.view.form()]);
@@ -72,9 +72,9 @@ export default () =>
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
-        listItem =>
+        (listItem) =>
           !["category", "author", "post", "siteSettings"].includes(
             listItem.getId()
           )
-      )
+      ),
     ]);
