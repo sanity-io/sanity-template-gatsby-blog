@@ -1,6 +1,6 @@
 module.exports = {
   parserOptions: {
-    sourceType: 'module',
+    sourceType: "module",
     ecmaVersion: 2018,
     ecmaFeatures: {
       jsx: true
@@ -11,14 +11,17 @@ module.exports = {
     browser: true
   },
   rules: {
-    'react/prop-types': 0,
-    'object-curly-spacing': ['error', 'never']
+    "react/prop-types": "off"
   },
-  extends: ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
   settings: {
     react: {
-      pragma: 'React',
-      version: 'detect'
+      pragma: "React",
+      version: "detect"
     }
   }
-}
+};
