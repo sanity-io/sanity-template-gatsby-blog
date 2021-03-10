@@ -1,47 +1,49 @@
-import {format, isFuture} from 'date-fns'
+import { format, isFuture } from "date-fns";
 
-export function cn (...args) {
-  return args.filter(Boolean).join(' ')
+export function cn(...args) {
+  return args.filter(Boolean).join(" ");
 }
 
-export function mapEdgesToNodes (data) {
-  if (!data.edges) return []
-  return data.edges.map(edge => edge.node)
+export function mapEdgesToNodes(data) {
+  if (!data.edges) return [];
+  return data.edges.map((edge) => edge.node);
 }
 
-export function filterOutDocsWithoutSlugs ({slug}) {
-  return (slug || {}).current
+export function filterOutDocsWithoutSlugs({ slug }) {
+  return (slug || {}).current;
 }
 
-export function filterOutDocsPublishedInTheFuture ({publishedAt}) {
-  return !isFuture(publishedAt)
+export function filterOutDocsPublishedInTheFuture({ publishedAt }) {
+  return !isFuture(publishedAt);
 }
 
-export function getBlogUrl (publishedAt, slug) {
-  return `/blog/${format(new Date(publishedAt), 'yyyy/MM')}/${slug.current || slug}/`
+export function getBlogUrl(publishedAt, slug) {
+  return `/blog/${format(new Date(publishedAt), "yyyy/MM")}/${
+    slug.current || slug
+  }/`;
 }
 
-export function buildImageObj (source = {asset: {}}) {
+export function buildImageObj(source = { asset: {} }) {
   const imageObj = {
-    asset: {_ref: source.asset._ref || source.asset._id}
-  }
+    asset: { _ref: source.asset._ref || source.asset._id },
+  };
 
-  if (source.crop) imageObj.crop = source.crop
-  if (source.hotspot) imageObj.hotspot = source.hotspot
+  if (source.crop) imageObj.crop = source.crop;
+  if (source.hotspot) imageObj.hotspot = source.hotspot;
 
-  return imageObj
+  return imageObj;
 }
 
-export function toPlainText (blocks) {
+export function toPlainText(blocks) {
   if (!blocks) {
-    return ''
+    return "";
   }
   return blocks
-    .map(block => {
-      if (block._type !== 'block' || !block.children) {
-        return ''
+    .map((block) => {
+      if (block._type !== "block" || !block.children) {
+        return "";
       }
-      return block.children.map(child => child.text).join('')
+      return block.children.map((child) => child.text).join("");
     })
-    .join('\n\n')
+    .join("\n\n");
 }

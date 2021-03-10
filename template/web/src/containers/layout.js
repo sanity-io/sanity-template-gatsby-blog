@@ -1,31 +1,31 @@
-import {StaticQuery, graphql} from 'gatsby'
-import React, {useState} from 'react'
-import Layout from '../components/layout'
+import { StaticQuery, graphql } from "gatsby";
+import React, { useState } from "react";
+import Layout from "../components/layout";
 
 const query = graphql`
   query SiteTitleQuery {
-    site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
     }
   }
-`
+`;
 
-function LayoutContainer (props) {
-  const [showNav, setShowNav] = useState(false)
-  function handleShowNav () {
-    setShowNav(true)
+function LayoutContainer(props) {
+  const [showNav, setShowNav] = useState(false);
+  function handleShowNav() {
+    setShowNav(true);
   }
-  function handleHideNav () {
-    setShowNav(false)
+  function handleHideNav() {
+    setShowNav(false);
   }
   return (
     <StaticQuery
       query={query}
-      render={data => {
+      render={(data) => {
         if (!data.site) {
           throw new Error(
             'Missing "Site settings". Open the Studio at http://localhost:3333 and some content in "Site settings"'
-          )
+          );
         }
         return (
           <Layout
@@ -35,10 +35,10 @@ function LayoutContainer (props) {
             onHideNav={handleHideNav}
             onShowNav={handleShowNav}
           />
-        )
+        );
       }}
     />
-  )
+  );
 }
 
-export default LayoutContainer
+export default LayoutContainer;
