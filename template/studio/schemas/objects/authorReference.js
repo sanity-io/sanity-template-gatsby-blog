@@ -8,15 +8,15 @@ export default {
       type: "reference",
       to: [
         {
-          type: "author"
-        }
-      ]
-    }
+          type: "author",
+        },
+      ],
+    },
   ],
   preview: {
     select: {
       title: "author.name",
-      media: "author.image.asset"
-    }
-  }
+      media: "author.image.asset",
+    },
+  },
 };

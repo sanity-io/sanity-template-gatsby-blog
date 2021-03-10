@@ -7,13 +7,13 @@ export default {
     {
       name: "title",
       type: "string",
-      title: "Title"
+      title: "Title",
     },
     {
       name: "description",
       type: "text",
       title: "Description",
-      description: "Describe your blog for search engines and social media."
+      description: "Describe your blog for search engines and social media.",
     },
     {
       name: "keywords",
@@ -22,15 +22,15 @@ export default {
       description: "Add keywords that describes your blog.",
       of: [{ type: "string" }],
       options: {
-        layout: "tags"
-      }
+        layout: "tags",
+      },
     },
     {
       name: "author",
       type: "reference",
       description: "Publish an author and set a reference to them here.",
       title: "Author",
-      to: [{ type: "author" }]
-    }
-  ]
+      to: [{ type: "author" }],
+    },
+  ],
 };

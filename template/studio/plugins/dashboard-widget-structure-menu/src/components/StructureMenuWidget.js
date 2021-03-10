@@ -20,8 +20,8 @@ function StructureMenuWidget(props) {
 
       <div className={styles.content}>
         {props.structure.items
-          .filter(item => item.type !== "divider")
-          .map(item => {
+          .filter((item) => item.type !== "divider")
+          .map((item) => {
             const Icon = getIconComponent(item);
             return (
               <div key={item.id}>
@@ -39,7 +39,7 @@ function StructureMenuWidget(props) {
   );
 }
 StructureMenuWidget.propTypes = {
-  structure: PropTypes.object()
+  structure: PropTypes.object,
 };
 
 export default StructureMenuWidget;
