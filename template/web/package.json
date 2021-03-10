@@ -13,15 +13,8 @@
   },
   "devDependencies": {
     "dotenv": "^8.0.0",
-    "eslint": "^7.21.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "babel-eslint": "^10.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.22.0",
     "postcss": "^8.2.7",
-    "postcss-preset-env": "^6.6.0",
-    "prettier-eslint-cli": "^4.7.1"
+    "postcss-preset-env": "^6.6.0"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",

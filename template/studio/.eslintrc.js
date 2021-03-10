@@ -1,27 +1,5 @@
 module.exports = {
-  parserOptions: {
-    sourceType: "module",
-    ecmaVersion: 2018,
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
-  env: {
-    node: true,
-    browser: true
-  },
   rules: {
-    "react/prop-types": "off"
+    "import/no-unresolved": ["error", { ignore: [".*:.*"] }],
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
-  ],
-  settings: {
-    react: {
-      pragma: "React",
-      version: "detect"
-    }
-  }
 };
