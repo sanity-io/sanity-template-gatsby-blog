@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "blog-with-gatsby-web",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
@@ -17,8 +17,8 @@
     "postcss-preset-env": "^6.6.0"
   },
   "dependencies": {
-    "@sanity/block-content-to-react": "^2.0.7",
-    "@sanity/image-url": "^0.140.22",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/image-url": "^1.0.0",
     "date-fns": "^2.19.0",
     "gatsby": "^3.0.3",
     "gatsby-image": "^2.0.41",
