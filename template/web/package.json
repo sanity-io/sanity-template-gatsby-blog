@@ -20,7 +20,7 @@
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/image-url": "^0.140.22",
     "date-fns": "^2.19.0",
-    "gatsby": "^4.3.0-next.1",
+    "gatsby": "^4.3.0",
     "gatsby-cli": "^4.1.0",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-gatsby-cloud": "^4.2.0",

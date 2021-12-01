@@ -17,7 +17,7 @@ module.exports = {
       options: {
         ...clientConfig.sanity,
         token: process.env.SANITY_READ_TOKEN,
-        overlayDrafts: process.env.GATSBY_IS_PREVIEW || !isProd,
+        overlayDrafts: process.env.GATSBY_IS_PREVIEW === true || !isProd,
       },
     },
   ],
