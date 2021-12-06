@@ -6,6 +6,7 @@ require("dotenv").config({
 const clientConfig = require("./client-config");
 
 const isProd = process.env.NODE_ENV === "production";
+const isPreview = process.env.GATSBY_IS_PREVIEW === "true";
 
 module.exports = {
   plugins: [
@@ -17,7 +18,8 @@ module.exports = {
       options: {
         ...clientConfig.sanity,
         token: process.env.SANITY_READ_TOKEN,
-        overlayDrafts: process.env.GATSBY_IS_PREVIEW === "true" || !isProd,
+        watchMode: !isPreview,
+        overlayDrafts: isPreview || !isProd,
       },
     },
   ],
