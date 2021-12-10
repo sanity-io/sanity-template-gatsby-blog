@@ -28,6 +28,7 @@
     "react-dom": "^17.0.2",
     "react-icons": "^3.11.0",
     "sanity-plugin-dashboard-widget-document-list": "^0.0.13",
-    "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
+    "sanity-plugin-dashboard-widget-netlify": "^1.0.1",
+    "sanity-plugin-gatsby-cloud-preview": "^1.0.0"
   }
 }
