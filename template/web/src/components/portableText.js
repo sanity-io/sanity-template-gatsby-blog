@@ -6,7 +6,7 @@ import { Figure } from "./Figure";
 const components = {
   types: {
     /* eslint-disable-next-line react/display-name */
-    authorReference: ({ node }) => <span>{node.author.name}</span>,
+    authorReference: ({ node }) => <span>{node?.author?.name}</span>,
     mainImage: Figure,
   },
 };
