@@ -1,2 +1,3 @@
 /web/public
-/studio/build
+/web/build
+/studio/dist
