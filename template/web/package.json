@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "blog-with-gatsby-web",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
@@ -26,8 +26,8 @@
     "gatsby-plugin-postcss": "^5.6.0",
     "gatsby-plugin-react-helmet": "^5.6.0",
     "gatsby-source-sanity": "^7.3.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0"
   }
 }
