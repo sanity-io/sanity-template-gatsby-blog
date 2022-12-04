@@ -34,7 +34,7 @@ function BlogPostPreview(props) {
           </div>
         )}
         <div className={styles.date}>
-          {format(new Date(props.publishedAt), "MMMM Mo, yyyy")}
+          {format(new Date(props.publishedAt), "MMMM do, yyyy")}
         </div>
       </div>
     </Link>
